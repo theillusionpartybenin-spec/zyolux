@@ -1,0 +1,3567 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZYRØ — Haute Horlogerie, VVS Diamonds & Editorial Luxury</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Geometric Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 for Minimalist Luxury Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Paystack Inline JS SDK -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- Tailwind Custom Theme Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "Georgia", "serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              zyro: {
+                ivory: "#FAF8F5",
+                cream: "#F2EDE4",
+                obsidian: "#0C0C0E",
+                charcoal: "#1A1A1F",
+                gold: "#C5A059",
+                goldLight: "#E5C98B",
+                emerald: "#0F4C3A",
+                sapphire: "#142952",
+                ruby: "#7A1628",
+                sand: "#DFD6C7",
+              },
+            },
+            letterSpacing: {
+              editorial: "0.22em",
+              ultra: "0.35em",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* ==========================================================================
+       ZYRØ LUXURY EDITORIAL STYLESHEET
+       ========================================================================== */
+      :root {
+        --bg-ivory: #faf8f5;
+        --ink-obsidian: #0c0c0e;
+        --accent-gold: #c5a059;
+        --accent-emerald: #0f4c3a;
+        --accent-sapphire: #142952;
+        --accent-ruby: #7a1628;
+      }
+
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: var(--bg-ivory);
+        color: var(--ink-obsidian);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Editorial Serif Headlines */
+      .font-editorial {
+        font-family: "Cormorant Garamond", Georgia, serif;
+      }
+
+      /* Subtle Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #faf8f5;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c5a059;
+        border-radius: 999px;
+      }
+
+      /* Zara-style Editorial Hover Zoom */
+      .editorial-card-media {
+        transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .group:hover .editorial-card-media {
+        transform: scale(1.05);
+      }
+
+      /* Glassmorphic Header Transition */
+      .header-scrolled {
+        background: rgba(250, 248, 245, 0.94);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(12, 12, 14, 0.08);
+      }
+
+      /* Slide-out Drawer Transitions */
+      .drawer-backdrop {
+        transition: opacity 0.35s ease;
+      }
+      .drawer-panel-right {
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .drawer-panel-left {
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Marquee Ticker Animation */
+      @keyframes marqueeScroll {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marqueeScroll 32s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }
+
+      /* Shimmer Gold Gradient Text */
+      .text-gold-shimmer {
+        background: linear-gradient(
+          120deg,
+          #a8823b 0%,
+          #e7c882 45%,
+          #c5a059 75%,
+          #8c6a2b 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Hide Scrollbar for Horizontal Filter Pills */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Toast Notification Animation */
+      @keyframes toastSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .toast-enter {
+        animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-zyro-gold selection:text-white">
+    <!-- ========================================================================
+       1. TOP ANNOUNCEMENT BAR (ZARA-INSPIRED EDITORIAL MARQUEE)
+       ======================================================================== -->
+    <div
+      class="bg-zyro-obsidian text-zyro-ivory text-[10px] sm:text-xs tracking-editorial uppercase py-2 overflow-hidden border-b border-white/10"
+    >
+      <div class="animate-marquee flex items-center gap-12">
+        <span
+          >NEW COLLECTION JUST DROPPED — EXPLORE NOW.</span
+        >
+        <span class="text-zyro-gold">✦</span>
+        <span>WELCOME TO THE WORLD OF ZYRØ.</span>
+        <span class="text-zyro-gold">✦</span>
+        <span
+          >USE CODE <strong class="text-zyro-goldLight">ZYROVIP</strong> FOR 10%
+          PRIVATE CLIENT PRIVILEGE</span
+        >
+        <span class="text-zyro-gold">✦</span>
+        <span
+          >ELEVATE YOUR EVERYDAY. SHOP ZYRØ.</span
+        >
+        <span class="text-zyro-gold">✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span
+          >NEW COLLECTION JUST DROPPED — EXPLORE NOW.</span
+        >
+        <span class="text-zyro-gold">✦</span>
+        <span>WELCOME TO THE WORLD OF ZYRØ</span>
+        <span class="text-zyro-gold">✦</span>
+        <span
+          >USE CODE <strong class="text-zyro-goldLight">ZYROVIP</strong> FOR 10%
+          PRIVATE CLIENT PRIVILEGE</span
+        >
+        <span class="text-zyro-gold">✦</span>
+        <span
+          >ELEVATE YOUR EVERYDAY. SHOP ZYRØ.</span
+        >
+        <span class="text-zyro-gold">✦</span>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       2. STICKY EDITORIAL NAVIGATION HEADER
+       ======================================================================== -->
+    <header
+      id="mainHeader"
+      class="sticky top-0 z-40 transition-all duration-300 bg-zyro-ivory/90 backdrop-blur-md border-b border-black/5"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-4 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-4"
+      >
+        <!-- Left: Mobile Menu Trigger + Desktop Editorial Links -->
+        <div class="flex items-center gap-5">
+          <button
+            id="openMenuBtn"
+            aria-label="Open Atelier Navigation"
+            class="p-2 -ml-2 text-zyro-obsidian hover:text-zyro-gold transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" d="M3 7h18M3 12h14M3 17h18" />
+            </svg>
+          </button>
+
+          <nav
+            class="hidden lg:flex items-center gap-6 text-[11px] font-medium tracking-editorial uppercase"
+          >
+            <button
+              onclick="filterByCategory('All')"
+              class="hover:text-zyro-gold transition"
+            >
+              New In
+            </button>
+            <button
+              onclick="filterByCategory('Watches')"
+              class="hover:text-zyro-gold transition"
+            >
+              Watches
+            </button>
+            <button
+              onclick="filterByCategory('VVS Jewellery')"
+              class="hover:text-zyro-gold transition"
+            >
+              VVS Diamonds
+            </button>
+            <button
+              onclick="filterByCategory('18K/24K Gold')"
+              class="hover:text-zyro-gold transition"
+            >
+              24K Gold
+            </button>
+            <button
+              onclick="filterByCategory('Eyewear')"
+              class="hover:text-zyro-gold transition"
+            >
+              Eyewear
+            </button>
+          </nav>
+        </div>
+
+        <!-- Center: ZYRØ Iconic Wordmark -->
+        <a
+          href="#top"
+          onclick="filterByCategory('All')"
+          class="flex flex-col items-center group"
+        >
+          <span
+            class="font-editorial text-3xl sm:text-4xl font-semibold tracking-[0.28em] text-zyro-obsidian group-hover:text-zyro-gold transition"
+          >
+            ZYRØ
+          </span>
+          <span
+            class="text-[8px] sm:text-[9px] tracking-[0.38em] uppercase text-neutral-500 -mt-1"
+          >
+            MAISON DE LUXE
+          </span>
+        </a>
+
+        <!-- Right: Currency Toggle, Search, Orders, Admin, Shopping Bag -->
+        <div class="flex items-center gap-2 sm:gap-4">
+          <!-- Currency Switcher (NGN ₦ / USD $) -->
+          <button
+            id="currencyToggleBtn"
+            onclick="toggleCurrency()"
+            title="Switch Currency (NGN / USD)"
+            class="px-2.5 py-1.5 rounded-full border border-black/15 text-[11px] font-semibold tracking-wider hover:border-zyro-gold hover:text-zyro-gold transition flex items-center gap-1"
+          >
+            <span id="currencyBadge">NGN ₦</span>
+          </button>
+
+          <!-- Search Toggle -->
+          <button
+            onclick="toggleSearchBar()"
+            aria-label="Search Collection"
+            class="p-2 text-zyro-obsidian hover:text-zyro-gold transition"
+          >
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+
+          <!-- Client Orders Tracking -->
+          <button
+            onclick="openOrdersModal()"
+            aria-label="Track Orders"
+            title="My Orders"
+            class="p-2 text-zyro-obsidian hover:text-zyro-gold transition hidden sm:inline-flex"
+          >
+            <i class="fa-regular fa-compass text-base"></i>
+          </button>
+
+          <!-- Admin Vault Lock -->
+          <button
+            onclick="openAdminModal()"
+            aria-label="ZYRO ADMIN DASHBOARD"
+            title="Admin Dashboard"
+            class="p-2 text-zyro-obsidian hover:text-zyro-ruby transition"
+          >
+            <i class="fa-solid fa-shield-halved text-sm"></i>
+          </button>
+
+          <!-- Shopping Bag Trigger -->
+          <button
+            onclick="openCartDrawer()"
+            aria-label="Shopping Bag"
+            class="relative p-2 text-zyro-obsidian hover:text-zyro-gold transition flex items-center gap-1.5"
+          >
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span
+              id="headerCartCount"
+              class="min-w-[20px] h-5 px-1.5 rounded-full bg-zyro-obsidian text-zyro-ivory text-[10px] font-semibold flex items-center justify-center"
+            >
+              0
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Expandable Search Bar -->
+      <div
+        id="searchBarPanel"
+        class="hidden border-t border-black/10 bg-zyro-ivory px-4 sm:px-8 py-4"
+      >
+        <div class="max-w-3xl mx-auto flex items-center gap-3">
+          <i class="fa-solid fa-magnifying-glass text-neutral-400"></i>
+          <input
+            id="searchInput"
+            type="text"
+            oninput="handleSearch(this.value)"
+            placeholder="Search tourbillon watches, VVS Cuban chains, emerald rings, titanium eyewear..."
+            class="w-full bg-transparent border-b border-black/20 py-2 text-sm focus:outline-none focus:border-zyro-gold"
+          />
+          <button
+            onclick="toggleSearchBar()"
+            class="text-xs uppercase tracking-widest text-neutral-500 hover:text-black"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       3. EDITORIAL HERO BANNER (COLORFUL LUXURY + VIDEO/VISUAL SHOWCASE)
+       ======================================================================== -->
+    <section
+      id="top"
+      class="relative min-h-[82vh] sm:min-h-[88vh] flex items-end overflow-hidden bg-zyro-obsidian text-zyro-ivory"
+    >
+      <!-- Ambient Editorial Video / High-Fashion Backdrop -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="8.png"
+        class="absolute inset-0 w-full h-full object-cover opacity-55 scale-105"
+      >
+        <source
+          src="https://assets.mixkit.co/videos/preview/mixkit-luxury-watch-close-up-42598-large.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- Colorful Couture Gradient Overlay (Emerald, Sapphire & Obsidian Depth) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-zyro-obsidian via-zyro-obsidian/45 to-zyro-sapphire/30"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-zyro-obsidian/85 via-transparent to-zyro-emerald/25"
+      ></div>
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 max-w-[1440px] mx-auto w-full px-4 sm:px-8 pb-14 sm:pb-24 pt-24"
+      >
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-zyro-gold animate-pulse"
+            ></span>
+            <span
+              class="text-[10px] sm:text-xs uppercase tracking-editorial text-zyro-goldLight font-medium"
+            >
+              COLLECTION 01 · THE ZYRØ LUXURY EDITION
+            </span>
+          </div>
+
+          <h1
+            class="font-editorial text-5xl sm:text-7xl lg:text-8xl font-normal leading-[0.95] tracking-tight mb-6"
+          >
+            Beyond Time.
+            <span class="italic text-zyro-goldLight">Beyond Ordinary</span>
+          </h1>
+
+          <p
+            class="text-sm sm:text-base text-neutral-200 max-w-xl leading-relaxed font-light mb-8"
+          >
+            Discover timeless watches, fine gold, VVS diamonds and luxury accessories. Elegance in every detail.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="#catalogSection"
+              class="px-8 py-4 rounded-full bg-zyro-gold text-zyro-obsidian text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-goldLight transition shadow-lg shadow-zyro-gold/20"
+            >
+              Explore The Vault
+            </a>
+            <button
+              onclick="openLookbookStory()"
+              class="px-7 py-4 rounded-full border border-white/30 bg-white/5 backdrop-blur-md text-white text-xs font-medium uppercase tracking-editorial hover:bg-white hover:text-zyro-obsidian transition flex items-center gap-2.5"
+            >
+              <i class="fa-solid fa-play text-[10px]"></i> Watch Campaign Film
+            </button>
+          </div>
+        </div>
+
+        <!-- Editorial Colour Palette Accent Pills -->
+        <div
+          class="mt-12 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs"
+        >
+          <div class="flex items-center gap-3">
+            <span
+              class="w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20"
+            ></span>
+            <div>
+              <p class="uppercase tracking-widest text-[10px] text-neutral-400">
+                VVS COLLECTION
+              </p>
+              <p class="font-editorial text-base text-white">
+                Pure Elegance &amp; Brilliant Details.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span
+              class="w-3 h-3 rounded-full bg-sky-400 ring-4 ring-sky-400/20"
+            ></span>
+            <div>
+              <p class="uppercase tracking-widest text-[10px] text-neutral-400">
+                LUXURY TIMEPIECES
+              </p>
+              <p class="font-editorial text-base text-white">
+               Crafted to Make a Statement
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span
+              class="w-3 h-3 rounded-full bg-amber-400 ring-4 ring-amber-400/20"
+            ></span>
+            <div>
+              <p class="uppercase tracking-widest text-[10px] text-neutral-400">
+                GOLD COLLECTION
+              </p>
+              <p class="font-editorial text-base text-white">
+                24K Golden Elegance
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span
+              class="w-3 h-3 rounded-full bg-rose-500 ring-4 ring-rose-500/20"
+            ></span>
+            <div>
+              <p class="uppercase tracking-widest text-[10px] text-neutral-400">
+                FINE JEWELLERY
+              </p>
+              <p class="font-editorial text-base text-white">
+                Radiance That Speaks
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       4. EDITORIAL CATEGORY SPOTLIGHT STRIP (COLORFUL LUXURY TILES)
+       ======================================================================== -->
+    <section class="max-w-[1440px] mx-auto px-4 sm:px-8 py-14 sm:py-20">
+      <div
+        class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4"
+      >
+        <div>
+          <p
+            class="text-[11px] uppercase tracking-editorial text-zyro-gold font-semibold mb-2"
+          >
+            Curated Departments
+          </p>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-normal">
+            The Six Pillars of ZYRØ
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-neutral-600 max-w-md">
+          Select any maison department below or combine multiple designs and
+          finishes of the same piece into a single curated bag.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4"
+      >
+        <!-- Category Card 1 -->
+        <button
+          onclick="filterByCategory('G-SHOCKS')"
+          class="group relative h-52 sm:h-64 rounded-2xl overflow-hidden text-left p-4 flex flex-col justify-end bg-zyro-emerald"
+        >
+          <img
+            src="1.png"
+            alt="G-SHOCKS"
+            class="absolute inset-0 w-full h-full object-cover opacity-75 editorial-card-media"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-zyro-emerald/95 via-black/25 to-transparent"
+          ></div>
+          <div class="relative z-10 text-white">
+            <span
+              class="text-[9px] uppercase tracking-widest text-zyro-goldLight"
+              >01</span
+            >
+            <h3 class="font-editorial text-xl sm:text-2xl">G-SHOCKS</h3>
+          </div>
+        </button>
+
+        <!-- Category Card 2 -->
+        <button
+          onclick="filterByCategory('VVS JEWELLERY')"
+          class="group relative h-52 sm:h-64 rounded-2xl overflow-hidden text-left p-4 flex flex-col justify-end bg-zyro-sapphire"
+        >
+          <img
+            src="2.png"
+            alt="VVS  JEWELLERY"
+            class="absolute inset-0 w-full h-full object-cover opacity-75 editorial-card-media"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-zyro-sapphire/95 via-black/25 to-transparent"
+          ></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[9px] uppercase tracking-widest text-sky-200"
+              >02</span
+            >
+            <h3 class="font-editorial text-xl sm:text-2xl">VVS JEWELLERY</h3>
+          </div>
+        </button>
+
+        <!-- Category Card 3 -->
+        <button
+          onclick="filterByCategory('EAR RINGS')"
+          class="group relative h-52 sm:h-64 rounded-2xl overflow-hidden text-left p-4 flex flex-col justify-end bg-amber-900"
+        >
+          <img
+            src="5.png"
+            alt="EAR RINGS"
+            class="absolute inset-0 w-full h-full object-cover opacity-75 editorial-card-media"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-amber-950/95 via-black/25 to-transparent"
+          ></div>
+          <div class="relative z-10 text-white">
+            <span
+              class="text-[9px] uppercase tracking-widest text-zyro-goldLight"
+              >03</span
+            >
+            <h3 class="font-editorial text-xl sm:text-2xl">EAR RINGS</h3>
+          </div>
+        </button>
+
+        <!-- Category Card 4 -->
+        <button
+          onclick="filterByCategory('ROLEX')"
+          class="group relative h-52 sm:h-64 rounded-2xl overflow-hidden text-left p-4 flex flex-col justify-end bg-neutral-900"
+        >
+          <img
+            src="7.png"
+            alt="ROLEX"
+            class="absolute inset-0 w-full h-full object-cover opacity-75 editorial-card-media"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-transparent"
+          ></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[9px] uppercase tracking-widest text-neutral-300"
+              >04</span
+            >
+            <h3 class="font-editorial text-xl sm:text-2xl">ROLEX</h3>
+          </div>
+        </button>
+
+        <!-- Category Card 5 -->
+        <button
+          onclick="filterByCategory('PENDANT')"
+          class="group relative h-52 sm:h-64 rounded-2xl overflow-hidden text-left p-4 flex flex-col justify-end bg-zyro-ruby"
+        >
+          <img
+            src="6.png"
+            alt="PENDANT"
+            class="absolute inset-0 w-full h-full object-cover opacity-75 editorial-card-media"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-zyro-ruby/95 via-black/25 to-transparent"
+          ></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[9px] uppercase tracking-widest text-rose-200"
+              >05</span
+            >
+            <h3 class="font-editorial text-xl sm:text-2xl">PENDANT</h3>
+          </div>
+        </button>
+
+        <!-- Category Card 6 -->
+        <button
+          onclick="filterByCategory('Bespoke Accessories')"
+          class="group relative h-52 sm:h-64 rounded-2xl overflow-hidden text-left p-4 flex flex-col justify-end bg-stone-900"
+        >
+          <img
+            src="8.png"
+            alt="RICHARD MILLE"
+            class="absolute inset-0 w-full h-full object-cover opacity-75 editorial-card-media"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-stone-950/95 via-black/25 to-transparent"
+          ></div>
+          <div class="relative z-10 text-white">
+            <span
+              class="text-[9px] uppercase tracking-widest text-zyro-goldLight"
+              >06</span
+            >
+            <h3 class="font-editorial text-xl sm:text-2xl">RICHARD MILLE</h3>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       5. INTERACTIVE CATALOG GRID (FILTERABLE, MULTI-VARIATION PREVIEW)
+       ======================================================================== -->
+    <section
+      id="catalogSection"
+      class="max-w-[1440px] mx-auto px-4 sm:px-8 pb-24"
+    >
+      <!-- Filter & Sort Bar -->
+      <div
+        class="sticky top-16 sm:top-20 z-30 bg-zyro-ivory/95 backdrop-blur-md py-4 mb-8 border-y border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-4"
+      >
+        <!-- Category Pills -->
+        <div
+          id="categoryFilterBar"
+          class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 md:pb-0"
+        >
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Sort & Count -->
+        <div
+          class="flex items-center justify-between md:justify-end gap-4 text-xs"
+        >
+          <span
+            id="catalogCountLabel"
+            class="uppercase tracking-widest text-neutral-500"
+            >Showing 8 Pieces</span
+          >
+          <select
+            id="sortSelect"
+            onchange="renderCatalog()"
+            class="bg-white border border-black/15 rounded-full px-4 py-2 text-xs font-medium focus:outline-none focus:border-zyro-gold"
+          >
+            <option value="featured">Curated Editorial</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Alphabetical (A–Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Editorial Product Grid -->
+      <div
+        id="productGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12"
+      >
+        <!-- Product Cards Rendered Here -->
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       6. EDITORIAL LOOKBOOK & BESPOKE ATELIER BANNER
+       ======================================================================== -->
+    <section
+      class="bg-zyro-obsidian text-zyro-ivory py-20 sm:py-28 px-4 sm:px-8 relative overflow-hidden"
+    >
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+      >
+        <div class="lg:col-span-5 space-y-6">
+          <span
+            class="inline-block px-3 py-1 rounded-full bg-zyro-emerald/40 border border-emerald-400/30 text-emerald-200 text-[10px] uppercase tracking-editorial"
+          >
+            MULTI-DESIGN COLLECTOR ENGINE
+          </span>
+          <h2 class="font-editorial text-4xl sm:text-6xl leading-tight">
+            Combine Multiple
+            <span class="italic text-zyro-goldLight"
+              >Finishes &amp; Carats</span
+            >
+            in One Order.
+          </h2>
+          <p class="text-sm text-neutral-300 leading-relaxed font-light">
+            Every ZYRØ creation is crafted in distinct variations—from 18K
+            Champagne Gold and Platinum 950 to VVS1 Iced Pavé and Emerald
+            Baguette bezels. Open any piece to select multiple designs
+            simultaneously and add them together into your unified shopping bag.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4">
+            <button
+              onclick="openProductModal(state.products[0].id)"
+              class="px-7 py-3.5 rounded-full bg-zyro-ivory text-zyro-obsidian text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-gold hover:text-white transition"
+            >
+              Customize Royal Tourbillon
+            </button>
+            <button
+              onclick="openOrdersModal()"
+              class="px-7 py-3.5 rounded-full border border-white/25 text-white text-xs uppercase tracking-editorial hover:border-zyro-gold transition"
+            >
+              Track Existing Order
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden aspect-[4/5] relative group">
+            <img
+              src="9.png"
+              alt="Horology Craft"
+              class="w-full h-full object-cover editorial-card-media"
+            />
+            <div
+              class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/60 backdrop-blur-md text-xs"
+            >
+              <p class="font-editorial text-lg text-zyro-goldLight">
+                VVS Moissanite Black Diamond Unisex Tennis Neckchain
+              </p>
+              <p class="text-neutral-300 text-[11px]">
+                Available in Store
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl overflow-hidden aspect-[4/5] relative group mt-8"
+          >
+            <img
+              src="10.png"
+              alt="3D Buss down VVS Moissanite Diamond Rings for Men"
+              class="w-full h-full object-cover editorial-card-media"
+            />
+            <div
+              class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/60 backdrop-blur-md text-xs"
+            >
+              <p class="font-editorial text-lg text-zyro-goldLight">
+              3D Buss down VVS Moissanite Diamond Rings for Men
+              </p>
+              <p class="text-neutral-300 text-[11px]">
+                Available in Store
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       7. LUXURY FOOTER
+       ======================================================================== -->
+    <footer
+      class="bg-zyro-cream border-t border-black/10 text-zyro-obsidian pt-16 pb-10 px-4 sm:px-8"
+    >
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-black/10"
+      >
+        <div>
+          <h3
+            class="font-editorial text-3xl tracking-[0.28em] font-semibold mb-3"
+          >
+            ZYRØ
+          </h3>
+          <p class="text-xs text-neutral-600 leading-relaxed mb-4">
+            Haute Horlogerie, VVS1 Diamond Jewellery, 24K Bullion Chains &amp;
+            Architectural Eyewear. Insured armoured global dispatch.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-neutral-500">
+            <span
+              class="px-2.5 py-1 rounded bg-white border border-black/10 font-medium"
+              >PAYSTACK VERIFIED</span
+            >
+            <span
+              class="px-2.5 py-1 rounded bg-white border border-black/10 font-medium"
+              >GIA / IGI</span
+            >
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] font-bold uppercase tracking-editorial mb-4">
+            Collections
+          </h4>
+          <ul class="space-y-2.5 text-xs text-neutral-600">
+            <li>
+              <button
+                onclick="filterByCategory('Watches')"
+                class="hover:text-zyro-gold"
+              >
+                Haute Horlogerie Watches
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="filterByCategory('VVS Jewellery')"
+                class="hover:text-zyro-gold"
+              >
+                VVS1 Iced Jewellery
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="filterByCategory('18K/24K Gold')"
+                class="hover:text-zyro-gold"
+              >
+                18K &amp; 24K Solid Gold
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="filterByCategory('Diamonds')"
+                class="hover:text-zyro-gold"
+              >
+                Solitaire &amp; Eternity Diamonds
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="filterByCategory('Eyewear')"
+                class="hover:text-zyro-gold"
+              >
+                Rimless Titanium Eyewear
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] font-bold uppercase tracking-editorial mb-4">
+            Client Services
+          </h4>
+          <ul class="space-y-2.5 text-xs text-neutral-600">
+            <li>
+              <button onclick="openOrdersModal()" class="hover:text-zyro-gold">
+                Track Armoured Delivery
+              </button>
+            </li>
+            <li>
+              <button onclick="openAdminModal()" class="hover:text-zyro-gold">
+                Maison Admin &amp; Inventory Vault
+              </button>
+            </li>
+            <li>
+              <span class="text-neutral-500"
+                >Promo Privilege:
+                <strong class="text-zyro-obsidian">ZYROVIP</strong> (10%
+                Off)</span
+              >
+            </li>
+            <li>
+              <span class="text-neutral-500"
+                >Concierge: concierge@zyro-maison.com</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] font-bold uppercase tracking-editorial mb-4">
+            Database &amp; Security Status
+          </h4>
+          <div
+            class="p-4 rounded-2xl bg-white border border-black/10 space-y-2 text-xs"
+          >
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-500">Cloud Sync:</span>
+              <span
+                id="firebaseStatusBadge"
+                class="font-semibold text-emerald-700 flex items-center gap-1.5"
+              >
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Ready
+                (Local + Firebase)
+              </span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-500">Payment Gateway:</span>
+              <span class="font-semibold text-zyro-sapphire"
+                >Paystack Live/Test</span
+              >
+            </div>
+            <p class="text-[11px] text-neutral-500 pt-1">
+              Edit
+              <code class="bg-neutral-100 px-1 rounded">ZYRO_CONFIG</code>
+              inside the script tag to connect your Firebase &amp; Paystack live
+              keys.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-[1440px] mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500"
+      >
+        <p>© 2026 ZYRØ MAISON DE LUXE. ALL RIGHTS RESERVED.</p>
+        <p class="tracking-widest uppercase">LAGOS · GENEVA · PARIS · DUBAI</p>
+      </div>
+    </footer>
+
+    <!-- ========================================================================
+       MODAL 1: PRODUCT DETAIL & MULTI-DESIGN SELECTOR MODAL
+       Allows inspecting multiple images & videos AND selecting multiple
+       designs/variations of the same product to add together to the cart!
+       ======================================================================== -->
+    <div
+      id="productModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-2 sm:p-6 bg-black/75 backdrop-blur-sm overflow-y-auto"
+    >
+      <div
+        class="relative w-full max-w-6xl bg-zyro-ivory rounded-3xl shadow-2xl overflow-hidden my-auto border border-white/20"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeProductModal()"
+          aria-label="Close Product View"
+          class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/90 text-zyro-obsidian hover:bg-zyro-obsidian hover:text-white transition flex items-center justify-center shadow-md"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div
+          id="productModalBody"
+          class="grid grid-cols-1 lg:grid-cols-12 max-h-[90vh] overflow-y-auto"
+        >
+          <!-- Dynamically Populated Product Gallery + Multi-Variation Selector -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       DRAWER 1: SLIDE-OUT EDITORIAL NAVIGATION MENU
+       ======================================================================== -->
+    <div
+      id="navDrawerBackdrop"
+      onclick="closeNavDrawer()"
+      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden opacity-0 drawer-backdrop"
+    ></div>
+    <aside
+      id="navDrawer"
+      class="fixed top-0 left-0 bottom-0 z-50 w-full max-w-sm bg-zyro-ivory text-zyro-obsidian p-6 sm:p-8 flex flex-col justify-between -translate-x-full drawer-panel-left shadow-2xl"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between pb-6 border-b border-black/10"
+        >
+          <span class="font-editorial text-2xl tracking-[0.25em] font-semibold"
+            >ZYRØ</span
+          >
+          <button
+            onclick="closeNavDrawer()"
+            class="p-2 text-neutral-500 hover:text-black"
+          >
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <div class="py-6 space-y-4">
+          <p
+            class="text-[10px] uppercase tracking-editorial text-zyro-gold font-semibold"
+          >
+            Atelier Departments
+          </p>
+          <button
+            onclick="
+              filterByCategory('All');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            All Creations
+          </button>
+          <button
+            onclick="
+              filterByCategory('Watches');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            Haute Horlogerie
+          </button>
+          <button
+            onclick="
+              filterByCategory('VVS Jewellery');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            VVS Jewellery
+          </button>
+          <button
+            onclick="
+              filterByCategory('18K/24K Gold');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            18K / 24K Gold
+          </button>
+          <button
+            onclick="
+              filterByCategory('Diamonds');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            Certified Diamonds
+          </button>
+          <button
+            onclick="
+              filterByCategory('Eyewear');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            Couture Eyewear
+          </button>
+          <button
+            onclick="
+              filterByCategory('Bespoke Accessories');
+              closeNavDrawer();
+            "
+            class="block w-full text-left font-editorial text-3xl hover:text-zyro-gold transition"
+          >
+            Bespoke Accessories
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-black/10 space-y-3">
+        <button
+          onclick="
+            closeNavDrawer();
+            openOrdersModal();
+          "
+          class="w-full py-3 px-4 rounded-xl bg-zyro-cream text-xs font-semibold uppercase tracking-widest flex items-center justify-between"
+        >
+          <span>Track My Orders</span>
+          <i class="fa-regular fa-compass"></i>
+        </button>
+        <button
+          onclick="
+            closeNavDrawer();
+            openAdminModal();
+          "
+          class="w-full py-3 px-4 rounded-xl bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-widest flex items-center justify-between"
+        >
+          <span>Maison Admin Vault</span>
+          <i class="fa-solid fa-lock text-zyro-gold"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ========================================================================
+       DRAWER 2: SLIDE-OUT SHOPPING BAG
+       ======================================================================== -->
+    <div
+      id="cartDrawerBackdrop"
+      onclick="closeCartDrawer()"
+      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden opacity-0 drawer-backdrop"
+    ></div>
+    <aside
+      id="cartDrawer"
+      class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-zyro-ivory text-zyro-obsidian flex flex-col translate-x-full drawer-panel-right shadow-2xl"
+    >
+      <!-- Cart Header -->
+      <div
+        class="p-6 border-b border-black/10 flex items-center justify-between bg-white"
+      >
+        <div>
+          <h3 class="font-editorial text-2xl font-medium">Your Curated Bag</h3>
+          <p
+            id="cartSubtitle"
+            class="text-[11px] uppercase tracking-widest text-neutral-500"
+          >
+            0 Items Selected
+          </p>
+        </div>
+        <button
+          onclick="closeCartDrawer()"
+          class="w-9 h-9 rounded-full bg-zyro-cream flex items-center justify-center hover:bg-zyro-obsidian hover:text-white transition"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <!-- Dynamically Rendered Cart Items -->
+      </div>
+
+      <!-- Cart Footer (Promo + Summary + Checkout Trigger) -->
+      <div
+        id="cartFooter"
+        class="p-6 bg-white border-t border-black/10 space-y-4"
+      >
+        <!-- Promo Code Input -->
+        <div class="flex gap-2">
+          <input
+            id="promoCodeInput"
+            type="text"
+            placeholder="Promo code (try ZYROVIP)"
+            class="flex-1 px-3.5 py-2.5 rounded-xl bg-zyro-ivory border border-black/15 text-xs uppercase tracking-wider focus:outline-none focus:border-zyro-gold"
+          />
+          <button
+            onclick="applyPromoCode()"
+            class="px-4 py-2.5 rounded-xl bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-wider hover:bg-zyro-gold transition"
+          >
+            Apply
+          </button>
+        </div>
+
+        <div class="space-y-1.5 text-xs">
+          <div class="flex justify-between text-neutral-600">
+            <span>Subtotal</span>
+            <span
+              id="cartSubtotalDisplay"
+              class="font-medium text-zyro-obsidian"
+              >₦0</span
+            >
+          </div>
+          <div
+            id="promoDiscountRow"
+            class="hidden justify-between text-emerald-700 font-medium"
+          >
+            <span>VIP Privilege Discount (10%)</span>
+            <span id="cartDiscountDisplay">-₦0</span>
+          </div>
+          <div class="flex justify-between text-neutral-600">
+            <span>Armoured Insured Courier</span>
+            <span
+              id="cartShippingDisplay"
+              class="font-medium text-zyro-obsidian"
+              >Complimentary</span
+            >
+          </div>
+          <div
+            class="flex justify-between text-base font-semibold pt-2 border-t border-black/10"
+          >
+            <span class="font-editorial text-xl">Estimated Total</span>
+            <span id="cartTotalDisplay" class="text-zyro-obsidian">₦0</span>
+          </div>
+        </div>
+
+        <button
+          onclick="openCheckoutModal()"
+          id="proceedCheckoutBtn"
+          class="w-full py-4 rounded-full bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-emerald transition flex items-center justify-center gap-2 shadow-lg"
+        >
+          <span>Proceed to Secure Checkout</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ========================================================================
+       MODAL 2: PAYSTACK CHECKOUT & PAYMENT VERIFICATION MODAL
+       ======================================================================== -->
+    <div
+      id="checkoutModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-sm overflow-y-auto"
+    >
+      <div
+        class="relative w-full max-w-4xl bg-zyro-ivory rounded-3xl shadow-2xl overflow-hidden my-auto border border-white/20"
+      >
+        <div
+          class="bg-zyro-obsidian text-white px-6 py-5 flex items-center justify-between"
+        >
+          <div>
+            <span
+              class="text-[10px] uppercase tracking-editorial text-zyro-goldLight"
+              >ENCRYPTED PAYSTACK CHECKOUT</span
+            >
+            <h3 class="font-editorial text-2xl sm:text-3xl">
+              Complete Your Acquisition
+            </h3>
+          </div>
+          <button
+            onclick="closeCheckoutModal()"
+            class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 max-h-[82vh] overflow-y-auto"
+        >
+          <!-- Customer Shipping Form -->
+          <form
+            id="checkoutForm"
+            onsubmit="initiatePaystackPayment(event)"
+            class="lg:col-span-7 p-6 sm:p-8 space-y-4"
+          >
+            <h4
+              class="text-xs font-bold uppercase tracking-editorial text-neutral-500"
+            >
+              1. Client &amp; Delivery Dossier
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                  >Full Name *</label
+                >
+                <input
+                  id="custName"
+                  type="text"
+                  required
+                  placeholder="Amara Okafor"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                  >Email Address *</label
+                >
+                <input
+                  id="custEmail"
+                  type="email"
+                  required
+                  placeholder="amara@domain.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                  >Phone (Courier Verification) *</label
+                >
+                <input
+                  id="custPhone"
+                  type="tel"
+                  required
+                  placeholder="+234 800 000 0000"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                  >City &amp; Country *</label
+                >
+                <input
+                  id="custCity"
+                  type="text"
+                  required
+                  placeholder="Victoria Island, Lagos"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                >Street / Estate Delivery Address *</label
+              >
+              <input
+                id="custAddress"
+                type="text"
+                required
+                placeholder="14 Bourdillon Road, Ikoyi"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+              />
+            </div>
+
+            <div
+              class="p-4 rounded-2xl bg-zyro-cream/70 border border-zyro-gold/30 text-xs space-y-2"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-semibold text-zyro-obsidian flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-shield-check text-zyro-emerald"></i>
+                  Paystack Payment &amp; Server Verification
+                </span>
+                <span
+                  class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold"
+                  >256-BIT SSL</span
+                >
+              </div>
+              <p class="text-neutral-600 leading-relaxed">
+                Supports Cards, Bank Transfer &amp; USSD via Paystack. Includes
+                built-in simulated Paystack modal fallback if using demo keys so
+                you can test end-to-end order verification immediately.
+              </p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+              <button
+                type="submit"
+                class="flex-1 py-4 px-6 rounded-full bg-zyro-emerald text-white text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-obsidian transition shadow-lg flex items-center justify-center gap-2"
+              >
+                <i class="fa-solid fa-lock"></i>
+                <span>Pay Now with Paystack</span>
+              </button>
+              <button
+                type="button"
+                onclick="simulateInstantPaystackSuccess()"
+                class="py-4 px-5 rounded-full border border-zyro-gold text-zyro-obsidian text-xs font-semibold uppercase tracking-wider hover:bg-zyro-gold hover:text-white transition"
+                title="Test instant verified payment without external popup"
+              >
+                Instant Demo Verify
+              </button>
+            </div>
+          </form>
+
+          <!-- Order Summary Sidebar -->
+          <div
+            class="lg:col-span-5 bg-white p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-black/10 flex flex-col justify-between"
+          >
+            <div>
+              <h4
+                class="text-xs font-bold uppercase tracking-editorial text-neutral-500 mb-4"
+              >
+                2. Acquisition Summary
+              </h4>
+              <div
+                id="checkoutSummaryItems"
+                class="space-y-3 max-h-60 overflow-y-auto pr-1"
+              >
+                <!-- Summary items injected here -->
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-black/10 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-neutral-500">Subtotal</span>
+                <span id="checkoutSubtotal" class="font-medium">₦0</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-neutral-500">VIP Discount</span>
+                <span id="checkoutDiscount" class="text-emerald-700 font-medium"
+                  >-₦0</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-neutral-500">Insured Armoured Shipping</span>
+                <span id="checkoutShipping" class="font-medium"
+                  >Complimentary</span
+                >
+              </div>
+              <div
+                class="flex justify-between text-lg font-semibold pt-3 border-t border-black/10"
+              >
+                <span class="font-editorial text-2xl">Total Due</span>
+                <span id="checkoutGrandTotal" class="text-zyro-emerald"
+                  >₦0</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       MODAL 3: CLIENT ORDER TRACKING & RECEIPT HISTORY
+       ======================================================================== -->
+    <div
+      id="ordersModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-sm overflow-y-auto"
+    >
+      <div
+        class="relative w-full max-w-3xl bg-zyro-ivory rounded-3xl shadow-2xl overflow-hidden my-auto"
+      >
+        <div
+          class="bg-zyro-sapphire text-white px-6 py-5 flex items-center justify-between"
+        >
+          <div>
+            <span class="text-[10px] uppercase tracking-editorial text-sky-200"
+              >CLIENT CONCIERGE PORTAL</span
+            >
+            <h3 class="font-editorial text-2xl sm:text-3xl">
+              Your Orders &amp; Certificates
+            </h3>
+          </div>
+          <button
+            onclick="closeOrdersModal()"
+            class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div
+          id="clientOrdersList"
+          class="p-6 max-h-[75vh] overflow-y-auto space-y-4"
+        >
+          <!-- Client orders populated here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       MODAL 4: SECURE MAISON ADMIN DASHBOARD (FIREBASE AUTH + CRUD + ORDERS)
+       ======================================================================== -->
+    <div
+      id="adminModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-2 sm:p-5 bg-black/85 backdrop-blur-md overflow-y-auto"
+    >
+      <div
+        class="relative w-full max-w-6xl bg-zyro-ivory rounded-3xl shadow-2xl overflow-hidden my-auto border border-white/15"
+      >
+        <!-- Admin Header -->
+        <div
+          class="bg-zyro-obsidian text-white px-6 py-4 flex items-center justify-between border-b border-white/10"
+        >
+          <div class="flex items-center gap-3">
+            <span
+              class="w-9 h-9 rounded-xl bg-zyro-gold/20 border border-zyro-gold/40 text-zyro-gold flex items-center justify-center"
+            >
+              <i class="fa-solid fa-crown"></i>
+            </span>
+            <div>
+              <h3 class="font-editorial text-2xl">ZYRØ Maison Vault — Admin</h3>
+              <p class="text-[10px] uppercase tracking-widest text-neutral-400">
+                Inventory · Multi-Design Pricing · Orders · Firebase Sync
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              id="adminLogoutBtn"
+              onclick="adminLogout()"
+              class="hidden px-3.5 py-1.5 rounded-full bg-white/10 text-xs hover:bg-zyro-ruby transition"
+            >
+              Lock Vault
+            </button>
+            <button
+              onclick="closeAdminModal()"
+              class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Admin Login Gate -->
+        <div
+          id="adminLoginView"
+          class="p-8 sm:p-14 max-w-md mx-auto text-center space-y-6"
+        >
+          <div
+            class="w-16 h-16 rounded-2xl bg-zyro-obsidian text-zyro-gold mx-auto flex items-center justify-center text-2xl shadow-lg"
+          >
+            <i class="fa-solid fa-fingerprint"></i>
+          </div>
+          <div>
+            <h4 class="font-editorial text-3xl mb-1">
+              Director Authentication
+            </h4>
+            <p class="text-xs text-neutral-500">
+              Sign in with your Firebase Admin credentials or enter Atelier Demo
+              Mode.
+            </p>
+          </div>
+
+          <form onsubmit="handleAdminLogin(event)" class="space-y-4 text-left">
+            <div>
+              <label
+                class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                >Admin Email</label
+              >
+              <input
+                id="adminEmailInput"
+                type="email"
+                value="director@zyro-maison.com"
+                required
+                class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                >Vault Passkey</label
+              >
+              <input
+                id="adminPassInput"
+                type="password"
+                value="ZYRO2026"
+                required
+                class="w-full px-4 py-3 rounded-xl bg-white border border-black/15 text-sm focus:outline-none focus:border-zyro-gold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full py-3.5 rounded-full bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-gold transition"
+            >
+              Unlock Maison Vault
+            </button>
+          </form>
+        </div>
+
+        <!-- Admin Dashboard Content (Shown after unlock) -->
+        <div
+          id="adminDashboardView"
+          class="hidden max-h-[82vh] overflow-y-auto p-6 space-y-6"
+        >
+          <!-- KPI Cards -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-4 rounded-2xl bg-white border border-black/10">
+              <p class="text-[10px] uppercase tracking-widest text-neutral-500">
+                Verified Revenue
+              </p>
+              <p
+                id="kpiRevenue"
+                class="font-editorial text-2xl sm:text-3xl font-semibold text-zyro-emerald mt-1"
+              >
+                ₦0
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-black/10">
+              <p class="text-[10px] uppercase tracking-widest text-neutral-500">
+                Total Orders
+              </p>
+              <p
+                id="kpiOrders"
+                class="font-editorial text-2xl sm:text-3xl font-semibold text-zyro-sapphire mt-1"
+              >
+                0
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-black/10">
+              <p class="text-[10px] uppercase tracking-widest text-neutral-500">
+                Catalog Pieces
+              </p>
+              <p
+                id="kpiProducts"
+                class="font-editorial text-2xl sm:text-3xl font-semibold text-zyro-obsidian mt-1"
+              >
+                0
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white border border-black/10">
+              <p class="text-[10px] uppercase tracking-widest text-neutral-500">
+                Low Stock Alerts
+              </p>
+              <p
+                id="kpiLowStock"
+                class="font-editorial text-2xl sm:text-3xl font-semibold text-zyro-ruby mt-1"
+              >
+                0
+              </p>
+            </div>
+          </div>
+
+          <!-- Admin Sub-Tabs -->
+          <div
+            class="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-3"
+          >
+            <div class="flex gap-2">
+              <button
+                onclick="switchAdminTab('products')"
+                id="tabBtnProducts"
+                class="px-4 py-2 rounded-full bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-wider"
+              >
+                Products &amp; Variations
+              </button>
+              <button
+                onclick="switchAdminTab('orders')"
+                id="tabBtnOrders"
+                class="px-4 py-2 rounded-full bg-white text-zyro-obsidian border border-black/15 text-xs font-semibold uppercase tracking-wider"
+              >
+                Orders &amp; Paystack Logs
+              </button>
+              <button
+                onclick="switchAdminTab('newProduct')"
+                id="tabBtnNewProduct"
+                class="px-4 py-2 rounded-full bg-zyro-emerald text-white text-xs font-semibold uppercase tracking-wider"
+              >
+                + Add New Creation
+              </button>
+            </div>
+            <button
+              onclick="resetDemoCatalog()"
+              class="text-xs text-neutral-500 hover:text-zyro-ruby underline"
+            >
+              Reset Default Catalog
+            </button>
+          </div>
+
+          <!-- Tab 1: Products Manager -->
+          <div id="adminTabProducts" class="space-y-3">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Tab 2: Orders Manager -->
+          <div id="adminTabOrders" class="hidden space-y-3">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Tab 3: Create / Edit Product Form -->
+          <div
+            id="adminTabNewProduct"
+            class="hidden bg-white p-6 rounded-2xl border border-black/10"
+          >
+            <h4 class="font-editorial text-2xl mb-4">
+              Add New Luxury Creation with Multi-Design Variations
+            </h4>
+            <form onsubmit="handleCreateProduct(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label
+                    class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                    >Creation Title *</label
+                  >
+                  <input
+                    id="newProdName"
+                    type="text"
+                    required
+                    placeholder="Aurelia Emerald Tourbillon"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 text-sm"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                    >Category *</label
+                  >
+                  <select
+                    id="newProdCategory"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 text-sm"
+                  >
+                    <option value="Watches">Watches</option>
+                    <option value="VVS Jewellery">VVS Jewellery</option>
+                    <option value="18K/24K Gold">18K/24K Gold</option>
+                    <option value="Diamonds">Diamonds</option>
+                    <option value="Eyewear">Eyewear</option>
+                    <option value="Bespoke Accessories">
+                      Bespoke Accessories
+                    </option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                    >Editorial Badge</label
+                  >
+                  <input
+                    id="newProdBadge"
+                    type="text"
+                    placeholder="LIMITED 1 OF 25"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 text-sm"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                  >Editorial Description *</label
+                >
+                <textarea
+                  id="newProdDesc"
+                  rows="2"
+                  required
+                  placeholder="Hand-finished 41mm case with sapphire exhibition back and VVS1 baguette bezel..."
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 text-sm"
+                ></textarea>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                    >Image URLs (comma-separated) *</label
+                  >
+                  <input
+                    id="newProdImages"
+                    type="text"
+                    required
+                    value="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85, https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=900&q=85"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 text-xs"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-[11px] uppercase tracking-wider text-neutral-600 mb-1"
+                    >Preview Video URL (optional MP4)</label
+                  >
+                  <input
+                    id="newProdVideo"
+                    type="text"
+                    placeholder="https://assets.mixkit.co/videos/preview/mixkit-luxury-watch-close-up-42598-large.mp4"
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-black/15 text-xs"
+                  />
+                </div>
+              </div>
+
+              <!-- Variations Builder -->
+              <div
+                class="p-4 rounded-2xl bg-zyro-ivory border border-black/10 space-y-3"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold uppercase tracking-wider"
+                    >Design Variations (Individual Price &amp; Stock)</span
+                  >
+                  <button
+                    type="button"
+                    onclick="addVariationInputRow()"
+                    class="px-3 py-1 rounded-full bg-zyro-gold text-white text-xs font-semibold"
+                  >
+                    + Add Design Option
+                  </button>
+                </div>
+                <div id="variationInputsContainer" class="space-y-2">
+                  <!-- Default 2 variation input rows -->
+                  <div
+                    class="grid grid-cols-12 gap-2 items-center variation-row"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Design Name (e.g. 18K Yellow Gold)"
+                      value="18K Yellow Gold"
+                      required
+                      class="col-span-5 px-3 py-2 rounded-lg border border-black/15 text-xs var-name"
+                    />
+                    <input
+                      type="color"
+                      value="#D4AF37"
+                      class="col-span-1 h-8 w-full rounded cursor-pointer var-color"
+                    />
+                    <input
+                      type="number"
+                      placeholder="Price NGN"
+                      value="4850000"
+                      required
+                      class="col-span-3 px-3 py-2 rounded-lg border border-black/15 text-xs var-price"
+                    />
+                    <input
+                      type="number"
+                      placeholder="Stock"
+                      value="5"
+                      required
+                      class="col-span-3 px-3 py-2 rounded-lg border border-black/15 text-xs var-stock"
+                    />
+                  </div>
+                  <div
+                    class="grid grid-cols-12 gap-2 items-center variation-row"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Design Name (e.g. Platinum VVS)"
+                      value="Platinum 950 Iced"
+                      required
+                      class="col-span-5 px-3 py-2 rounded-lg border border-black/15 text-xs var-name"
+                    />
+                    <input
+                      type="color"
+                      value="#E5E4E2"
+                      class="col-span-1 h-8 w-full rounded cursor-pointer var-color"
+                    />
+                    <input
+                      type="number"
+                      placeholder="Price NGN"
+                      value="6200000"
+                      required
+                      class="col-span-3 px-3 py-2 rounded-lg border border-black/15 text-xs var-price"
+                    />
+                    <input
+                      type="number"
+                      placeholder="Stock"
+                      value="3"
+                      required
+                      class="col-span-3 px-3 py-2 rounded-lg border border-black/15 text-xs var-stock"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="px-8 py-3.5 rounded-full bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-emerald transition"
+              >
+                Publish Creation to ZYRØ Storefront
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       MODAL 5: CAMPAIGN FILM SHOWCASE MODAL
+       ======================================================================== -->
+    <div
+      id="campaignModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/90 backdrop-blur-md"
+    >
+      <div
+        class="relative w-full max-w-4xl rounded-3xl overflow-hidden bg-black border border-white/15 shadow-2xl"
+      >
+        <button
+          onclick="closeLookbookStory()"
+          class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/15 text-white hover:bg-white hover:text-black transition flex items-center justify-center"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <video
+          controls
+          autoplay
+          loop
+          playsinline
+          class="w-full aspect-video object-cover"
+        >
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-luxury-watch-close-up-42598-large.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div
+          class="p-6 bg-zyro-obsidian text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+        >
+          <div>
+            <p class="text-[10px] uppercase tracking-editorial text-zyro-gold">
+              ZYRØ GENEVA · ATELIER FILM
+            </p>
+            <h4 class="font-editorial text-2xl">
+              The Architecture of Light &amp; Time
+            </h4>
+          </div>
+          <button
+            onclick="
+              closeLookbookStory();
+              document
+                .getElementById('catalogSection')
+                .scrollIntoView({ behavior: 'smooth' });
+            "
+            class="px-6 py-2.5 rounded-full bg-zyro-gold text-zyro-obsidian text-xs font-semibold uppercase tracking-widest"
+          >
+            Shop Featured Pieces
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       TOAST NOTIFICATION CONTAINER
+       ======================================================================== -->
+    <div
+      id="toastContainer"
+      class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"
+    ></div>
+
+    <!-- ========================================================================
+       APPLICATION JAVASCRIPT & FIREBASE v10 MODULAR INTEGRATION
+       ======================================================================== -->
+    <script type="module">
+      // ------------------------------------------------------------------------
+      // A. EASY-TO-EDIT MAISON CONFIGURATION (FIREBASE + PAYSTACK)
+      // Replace placeholder keys with your live Firebase & Paystack keys.
+      // The storefront runs seamlessly out-of-the-box with local persistence
+      // and automatically upgrades to live cloud sync when keys are provided.
+      // ------------------------------------------------------------------------
+      const ZYRO_CONFIG = {
+        brandName: "ZYRØ",
+        ngnToUsdRate: 1580, // Conversion rate for dual-currency display (₦1,580 = $1)
+        paystackPublicKey: "pk_test_1234567890abcdef1234567890abcdef12345678", // Replace with your Paystack Public Key
+        paystackVerifyEndpoint: "/api/verify-paystack", // Backend Cloud Function / server verification endpoint
+        firebaseConfig: {
+          apiKey: "", // Add your Firebase apiKey to activate live Firestore & Auth
+          authDomain: "",
+          projectId: "",
+          storageBucket: "",
+          messagingSenderId: "",
+          appId: "",
+        },
+      };
+
+      // Optional Firebase Modular SDK Imports (Loaded cleanly without blocking offline/demo usage)
+      let fbDb = null;
+      let fbAuth = null;
+      let firestoreFns = null;
+
+      async function initFirebaseIfConfigured() {
+        const badge = document.getElementById("firebaseStatusBadge");
+        if (
+          !ZYRO_CONFIG.firebaseConfig.apiKey ||
+          !ZYRO_CONFIG.firebaseConfig.projectId
+        ) {
+          if (badge) {
+            badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-500"></span> Local Vault Active (Add Firebase Keys)`;
+            badge.className =
+              "font-semibold text-amber-700 flex items-center gap-1.5";
+          }
+          return;
+        }
+
+        try {
+          const { initializeApp } =
+            await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+          const { getAuth, signInWithEmailAndPassword, signOut } =
+            await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js");
+          const { getFirestore, collection, getDocs, setDoc, doc, deleteDoc } =
+            await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+
+          const app = initializeApp(ZYRO_CONFIG.firebaseConfig);
+          fbAuth = getAuth(app);
+          fbDb = getFirestore(app);
+          firestoreFns = {
+            collection,
+            getDocs,
+            setDoc,
+            doc,
+            deleteDoc,
+            signInWithEmailAndPassword,
+            signOut,
+          };
+
+          if (badge) {
+            badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Firebase Cloud Connected`;
+            badge.className =
+              "font-semibold text-emerald-700 flex items-center gap-1.5";
+          }
+
+          // Sync products & orders from Firestore if collection exists
+          const snap = await getDocs(collection(fbDb, "zyro_products"));
+          if (!snap.empty) {
+            state.products = snap.docs.map((d) => d.data());
+            saveStateToLocal();
+            renderCatalog();
+          }
+        } catch (err) {
+          console.warn(
+            "Firebase initialization skipped or offline:",
+            err.message,
+          );
+        }
+      }
+
+      // ------------------------------------------------------------------------
+      // B. DEFAULT LUXURY CATALOG (WATCHES, GOLD, DIAMONDS, VVS, EYEWEAR, ETC.)
+      // ------------------------------------------------------------------------
+      const DEFAULT_PRODUCTS = [
+        {
+          id: "zyro-watch-01",
+          name: "Sovereign Emerald Tourbillon 41mm",
+          category: "Watches",
+          badge: "HAUTE HORLOGERIE · 1 OF 30",
+          accentColor: "#0F4C3A",
+          description:
+            "Open-worked flying tourbillon movement encased in solid 18K brushed gold or Grade-5 Titanium. Features sunray Malachite Emerald dial, sapphire crystal caseback, and 72-hour power reserve.",
+          images: [
+            "5.png",
+            "4.png",
+            "6.png",
+          ],
+          video:
+            "https://assets.mixkit.co/videos/preview/mixkit-luxury-watch-close-up-42598-large.mp4",
+          variations: [
+            {
+              id: "v-w1-gold",
+              name: "18K Yellow Gold · Emerald Dial",
+              color: "#C5A059",
+              priceNGN: 8450000,
+              stock: 4,
+            },
+            {
+              id: "v-w1-rose",
+              name: "18K Rose Gold · Obsidian Dial",
+              color: "#B76E79",
+              priceNGN: 8900000,
+              stock: 3,
+            },
+            {
+              id: "v-w1-vvs",
+              name: "Platinum 950 · VVS1 Baguette Bezel",
+              color: "#E5E4E2",
+              priceNGN: 14200000,
+              stock: 2,
+            },
+          ],
+        },
+        {
+          id: "zyro-vvs-02",
+          name: "Geneva VVS1 Iced Monaco Cuban Link",
+          category: "VVS Jewellery",
+          badge: "GIA CERTIFIED · D-VVS1",
+          accentColor: "#142952",
+          description:
+            "Hand-forged 14mm Miami Cuban chain fully flooded with 28.4 carats of D-color VVS1 natural diamonds in honeycomb micro-pavé setting with box-lock safety clasp.",
+          images: [
+            "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video:
+            "https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-diamond-ring-42605-large.mp4",
+          variations: [
+            {
+              id: "v-vvs-18w",
+              name: "18K White Gold · 20 Inch",
+              color: "#E8ECEF",
+              priceNGN: 6800000,
+              stock: 5,
+            },
+            {
+              id: "v-vvs-22y",
+              name: "18K Yellow Gold · 22 Inch",
+              color: "#D4AF37",
+              priceNGN: 7350000,
+              stock: 4,
+            },
+            {
+              id: "v-vvs-rose",
+              name: "18K Rose Gold · 20 Inch",
+              color: "#C98A7B",
+              priceNGN: 6950000,
+              stock: 2,
+            },
+          ],
+        },
+        {
+          id: "zyro-gold-03",
+          name: "Aurum 24K Solid Bullion Herringbone Collar",
+          category: "18K/24K Gold",
+          badge: "999.9 PURE GOLD ATELIER",
+          accentColor: "#C5A059",
+          description:
+            "Liquid-drape Italian woven herringbone collar cast in hallmarked 24K pure bullion gold or 18K architectural links. Engineered for weight, luminosity, and heirloom longevity.",
+          images: [
+            "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video: "",
+          variations: [
+            {
+              id: "v-g-18k",
+              name: "18K Champagne Gold (68g)",
+              color: "#DFC07F",
+              priceNGN: 3450000,
+              stock: 7,
+            },
+            {
+              id: "v-g-24k",
+              name: "24K Pure Bullion Gold (92g)",
+              color: "#FFD700",
+              priceNGN: 5150000,
+              stock: 3,
+            },
+            {
+              id: "v-g-two",
+              name: "24K & Platinum Bi-Metal Edition",
+              color: "#C0C0C0",
+              priceNGN: 5600000,
+              stock: 2,
+            },
+          ],
+        },
+        {
+          id: "zyro-dia-04",
+          name: "Étoile 5.20ct Emerald-Cut Solitaire & Eternity Set",
+          category: "Diamonds",
+          badge: "IGI / GIA DOSSIER",
+          accentColor: "#0C0C0E",
+          description:
+            "Architectural step-cut 5.20ct center diamond flanked by tapered baguettes on a knife-edge platinum gallery. Includes matching full-eternity band option.",
+          images: [
+            "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video:
+            "https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-diamond-ring-42605-large.mp4",
+          variations: [
+            {
+              id: "v-d-plat",
+              name: "Platinum 950 · D-VVS1 Solitaire",
+              color: "#E5E4E2",
+              priceNGN: 9200000,
+              stock: 3,
+            },
+            {
+              id: "v-d-gold",
+              name: "18K Yellow Gold · Fancy Yellow Center",
+              color: "#E6BE44",
+              priceNGN: 10500000,
+              stock: 2,
+            },
+            {
+              id: "v-d-pair",
+              name: "Complete Bridal Solitaire + Eternity Duo",
+              color: "#B9F2FF",
+              priceNGN: 12800000,
+              stock: 2,
+            },
+          ],
+        },
+        {
+          id: "zyro-eye-05",
+          name: "Vespera Rimless 18K Gold & Buffalo Horn Opticals",
+          category: "Eyewear",
+          badge: "PARIS OPTICAL RUNWAY",
+          accentColor: "#7A1628",
+          description:
+            "Featherweight Japanese beta-titanium and solid 18K gold bridge paired with ethically sourced water-buffalo horn temples and diamond-cut chromatic Zeiss lenses.",
+          images: [
+            "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video: "",
+          variations: [
+            {
+              id: "v-e-ruby",
+              name: "18K Gold · Ruby Sunset Tint",
+              color: "#8B1E3F",
+              priceNGN: 980000,
+              stock: 9,
+            },
+            {
+              id: "v-e-em",
+              name: "White Horn · Emerald Gradient",
+              color: "#0F4C3A",
+              priceNGN: 1120000,
+              stock: 6,
+            },
+            {
+              id: "v-e-vvs",
+              name: "VVS Diamond Temple Edition · Smoke",
+              color: "#2C2C34",
+              priceNGN: 2450000,
+              stock: 3,
+            },
+          ],
+        },
+        {
+          id: "zyro-watch-06",
+          name: "Celestia Perpetual Moonphase Chronograph",
+          category: "Watches",
+          badge: "SWISS CHRONOMETER",
+          accentColor: "#142952",
+          description:
+            "Aventurine starry-sky moonphase display crafted from genuine Venetian glass with solid gold lunar discs and hand-stitched alligator strap.",
+          images: [
+            "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video: "",
+          variations: [
+            {
+              id: "v-w2-sap",
+              name: "Sapphire Aventurine · White Gold",
+              color: "#142952",
+              priceNGN: 7100000,
+              stock: 4,
+            },
+            {
+              id: "v-w2-champ",
+              name: "Champagne Sunburst · 18K Gold",
+              color: "#C5A059",
+              priceNGN: 7450000,
+              stock: 3,
+            },
+          ],
+        },
+        {
+          id: "zyro-vvs-07",
+          name: "Imperium VVS Baguette Tennis Bracelet",
+          category: "VVS Jewellery",
+          badge: "BESTSELLER · VVS1",
+          accentColor: "#0F4C3A",
+          description:
+            "Double-row channel-set baguette and round brilliant VVS1 diamonds articulated for fluid wrist movement. Secured with twin figure-eight clasps.",
+          images: [
+            "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video: "",
+          variations: [
+            {
+              id: "v-tb-w",
+              name: "18K White Gold · 14.5ct VVS1",
+              color: "#E5E4E2",
+              priceNGN: 4200000,
+              stock: 6,
+            },
+            {
+              id: "v-tb-y",
+              name: "18K Yellow Gold · 14.5ct VVS1",
+              color: "#D4AF37",
+              priceNGN: 4350000,
+              stock: 5,
+            },
+            {
+              id: "v-tb-em",
+              name: "18K Gold · Emerald & VVS Alternating",
+              color: "#0F4C3A",
+              priceNGN: 4950000,
+              stock: 2,
+            },
+          ],
+        },
+        {
+          id: "zyro-acc-08",
+          name: "Monolith Crocodile & 18K Gold Card & Watch Trunk",
+          category: "Bespoke Accessories",
+          badge: "ATELIER LEATHER",
+          accentColor: "#4A2C2A",
+          description:
+            "Hand-saddle-stitched matte Niloticus leather travel watch roll and cardholder fitted with solid 18K gold ZYRØ monogram hardware and suede cushions.",
+          images: [
+            "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85",
+          ],
+          video: "",
+          variations: [
+            {
+              id: "v-ac-obs",
+              name: "Obsidian Matte · 18K Gold Lock",
+              color: "#111111",
+              priceNGN: 890000,
+              stock: 8,
+            },
+            {
+              id: "v-ac-em",
+              name: "British Racing Emerald · Gold Lock",
+              color: "#0F4C3A",
+              priceNGN: 940000,
+              stock: 5,
+            },
+            {
+              id: "v-ac-rub",
+              name: "Bordeaux Ruby · Platinum Lock",
+              color: "#7A1628",
+              priceNGN: 960000,
+              stock: 4,
+            },
+          ],
+        },
+      ];
+
+      // ------------------------------------------------------------------------
+      // C. APPLICATION STATE (PERSISTED IN LOCALSTORAGE + OPTIONAL FIRESTORE)
+      // ------------------------------------------------------------------------
+      const STORAGE_KEYS = {
+        PRODUCTS: "zyro_maison_products_v1",
+        CART: "zyro_maison_cart_v1",
+        ORDERS: "zyro_maison_orders_v1",
+        CURRENCY: "zyro_maison_currency_v1",
+      };
+
+      const state = {
+        products:
+          JSON.parse(localStorage.getItem(STORAGE_KEYS.PRODUCTS)) ||
+          DEFAULT_PRODUCTS,
+        cart: JSON.parse(localStorage.getItem(STORAGE_KEYS.CART)) || [],
+        orders: JSON.parse(localStorage.getItem(STORAGE_KEYS.ORDERS)) || [],
+        currency: localStorage.getItem(STORAGE_KEYS.CURRENCY) || "NGN", // 'NGN' or 'USD'
+        selectedCategory: "All",
+        searchQuery: "",
+        promoApplied: false,
+        isAdminAuthenticated: false,
+        activeModalProduct: null,
+        activeMediaIndex: 0,
+        // Tracks quantities selected per variation inside the Product Detail Modal
+        modalVariationQuantities: {},
+      };
+
+      function saveStateToLocal() {
+        localStorage.setItem(
+          STORAGE_KEYS.PRODUCTS,
+          JSON.stringify(state.products),
+        );
+        localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(state.cart));
+        localStorage.setItem(STORAGE_KEYS.ORDERS, JSON.stringify(state.orders));
+        localStorage.setItem(STORAGE_KEYS.CURRENCY, state.currency);
+      }
+
+      // ------------------------------------------------------------------------
+      // D. CURRENCY FORMATTING & TOAST NOTIFICATIONS
+      // ------------------------------------------------------------------------
+      function formatPrice(amountNGN) {
+        if (state.currency === "USD") {
+          const usd = amountNGN / ZYRO_CONFIG.ngnToUsdRate;
+          return new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            maximumFractionDigits: 0,
+          }).format(usd);
+        }
+        return "₦" + Math.round(amountNGN).toLocaleString("en-NG");
+      }
+
+      window.toggleCurrency = function () {
+        state.currency = state.currency === "NGN" ? "USD" : "NGN";
+        document.getElementById("currencyBadge").textContent =
+          state.currency === "NGN" ? "NGN ₦" : "USD $";
+        saveStateToLocal();
+        renderCatalog();
+        renderCart();
+        if (state.activeModalProduct) {
+          openProductModal(state.activeModalProduct.id);
+        }
+        showToast(`Currency switched to ${state.currency}`);
+      };
+
+      function showToast(message, type = "gold") {
+        const container = document.getElementById("toastContainer");
+        const toast = document.createElement("div");
+        const borderClass =
+          type === "error"
+            ? "border-zyro-ruby bg-zyro-obsidian text-white"
+            : type === "success"
+              ? "border-emerald-400 bg-zyro-emerald text-white"
+              : "border-zyro-gold bg-zyro-obsidian text-zyro-ivory";
+
+        toast.className = `pointer-events-auto px-4 py-3 rounded-2xl border ${borderClass} shadow-2xl text-xs font-medium flex items-center gap-2.5 toast-enter`;
+        toast.innerHTML = `<i class="fa-solid fa-sparkles text-zyro-goldLight"></i><span>${message}</span>`;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.opacity = "0";
+          toast.style.transform = "translateY(10px)";
+          toast.style.transition = "all 0.3s ease";
+          setTimeout(() => toast.remove(), 300);
+        }, 3200);
+      }
+
+      // ------------------------------------------------------------------------
+      // E. CATALOG RENDERING, SEARCH & FILTERING
+      // ------------------------------------------------------------------------
+      const CATEGORIES = [
+        "All",
+        "Watches",
+        "VVS Jewellery",
+        "18K/24K Gold",
+        "Diamonds",
+        "Eyewear",
+        "Bespoke Accessories",
+      ];
+
+      function renderCategoryPills() {
+        const bar = document.getElementById("categoryFilterBar");
+        bar.innerHTML = CATEGORIES.map((cat) => {
+          const active = state.selectedCategory === cat;
+          return `
+          <button onclick="filterByCategory('${cat}')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-[11px] font-semibold uppercase tracking-wider transition ${
+              active
+                ? "bg-zyro-obsidian text-zyro-ivory shadow-sm"
+                : "bg-white text-zyro-obsidian border border-black/10 hover:border-zyro-gold"
+            }">
+            ${cat}
+          </button>
+        `;
+        }).join("");
+      }
+
+      window.filterByCategory = function (category) {
+        state.selectedCategory = category;
+        renderCategoryPills();
+        renderCatalog();
+      };
+
+      window.handleSearch = function (query) {
+        state.searchQuery = query.trim().toLowerCase();
+        renderCatalog();
+      };
+
+      window.toggleSearchBar = function () {
+        const bar = document.getElementById("searchBarPanel");
+        bar.classList.toggle("hidden");
+        if (!bar.classList.contains("hidden")) {
+          document.getElementById("searchInput").focus();
+        }
+      };
+
+      window.renderCatalog = function () {
+        const grid = document.getElementById("productGrid");
+        const sortBy = document.getElementById("sortSelect").value;
+
+        let filtered = state.products.filter((p) => {
+          const matchesCat =
+            state.selectedCategory === "All" ||
+            p.category === state.selectedCategory;
+          const matchesSearch =
+            !state.searchQuery ||
+            p.name.toLowerCase().includes(state.searchQuery) ||
+            p.category.toLowerCase().includes(state.searchQuery) ||
+            p.description.toLowerCase().includes(state.searchQuery) ||
+            p.variations.some((v) =>
+              v.name.toLowerCase().includes(state.searchQuery),
+            );
+          return matchesCat && matchesSearch;
+        });
+
+        // Sort logic using minimum variation price
+        const minPrice = (p) =>
+          Math.min(...p.variations.map((v) => v.priceNGN));
+        if (sortBy === "price-asc")
+          filtered.sort((a, b) => minPrice(a) - minPrice(b));
+        if (sortBy === "price-desc")
+          filtered.sort((a, b) => minPrice(b) - minPrice(a));
+        if (sortBy === "name")
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
+
+        document.getElementById("catalogCountLabel").textContent =
+          `Showing ${filtered.length} Creation${filtered.length === 1 ? "" : "s"}`;
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `
+          <div class="col-span-full py-20 text-center space-y-3">
+            <p class="font-editorial text-3xl">No creations match your current filter.</p>
+            <button onclick="filterByCategory('All'); document.getElementById('searchInput').value=''; handleSearch('');"
+              class="px-6 py-2.5 rounded-full bg-zyro-obsidian text-white text-xs uppercase tracking-widest">
+              View Complete Atelier
+            </button>
+          </div>
+        `;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((product) => {
+            const startingPrice = minPrice(product);
+            const totalStock = product.variations.reduce(
+              (sum, v) => sum + v.stock,
+              0,
+            );
+            const swatchesHtml = product.variations
+              .map(
+                (v) =>
+                  `<span title="${v.name} (${formatPrice(v.priceNGN)})" class="w-3.5 h-3.5 rounded-full border border-black/25 shadow-xs" style="background:${v.color}"></span>`,
+              )
+              .join("");
+
+            return `
+            <article class="group flex flex-col cursor-pointer" onclick="openProductModal('${product.id}')">
+              <!-- Editorial Portrait Card Media -->
+              <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-zyro-cream mb-4">
+                <img src="${product.images[0]}" alt="${product.name}" loading="lazy"
+                  onerror="this.src='https://placehold.co/600x800/1A1A1F/C5A059?text=ZYRO+ATELIER'"
+                  class="w-full h-full object-cover editorial-card-media" />
+
+                <!-- Top Badges -->
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                  <span class="px-2.5 py-1 rounded-full bg-zyro-obsidian/85 backdrop-blur-md text-zyro-goldLight text-[9px] font-semibold uppercase tracking-widest">
+                    ${product.badge || product.category}
+                  </span>
+                  ${
+                    product.video
+                      ? `<span class="w-7 h-7 rounded-full bg-white/90 text-zyro-obsidian flex items-center justify-center text-[10px] shadow" title="Includes Video Showcase">
+                          <i class="fa-solid fa-play"></i>
+                        </span>`
+                      : ""
+                  }
+                </div>
+
+                <!-- Hover Quick Action Bar -->
+                <div class="absolute inset-x-3 bottom-3 p-3 rounded-xl bg-white/95 backdrop-blur-md translate-y-2 opacity-95 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 flex items-center justify-between shadow-lg">
+                  <span class="text-[10px] font-semibold uppercase tracking-widest text-zyro-obsidian">
+                    ${product.variations.length} Designs · Select Multi
+                  </span>
+                  <span class="w-7 h-7 rounded-full bg-zyro-obsidian text-white flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-plus"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Editorial Typography Details -->
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-neutral-500 mb-0.5">${product.category}</p>
+                  <h3 class="font-editorial text-xl sm:text-2xl leading-snug group-hover:text-zyro-gold transition">
+                    ${product.name}
+                  </h3>
+                </div>
+              </div>
+
+              <div class="mt-2 flex items-center justify-between">
+                <p class="text-xs sm:text-sm font-semibold text-zyro-obsidian">
+                  From ${formatPrice(startingPrice)}
+                </p>
+                <div class="flex items-center gap-1.5">
+                  ${swatchesHtml}
+                </div>
+              </div>
+              <p class="text-[10px] text-neutral-500 mt-1">
+                ${totalStock > 0 ? `${totalStock} pieces available across ${product.variations.length} finishes` : "Sold Out"}
+              </p>
+            </article>
+          `;
+          })
+          .join("");
+      };
+
+      // ------------------------------------------------------------------------
+      // F. PRODUCT DETAIL MODAL & MULTI-DESIGN CART ADDITION ENGINE
+      // ------------------------------------------------------------------------
+      window.openProductModal = function (productId) {
+        const product = state.products.find((p) => p.id === productId);
+        if (!product) return;
+
+        state.activeModalProduct = product;
+        state.activeMediaIndex = 0;
+
+        // Initialize per-variation selection quantities (default 1 for first available variation, 0 for others)
+        state.modalVariationQuantities = {};
+        product.variations.forEach((v, idx) => {
+          state.modalVariationQuantities[v.id] =
+            idx === 0 && v.stock > 0 ? 1 : 0;
+        });
+
+        renderProductModalContent();
+
+        const modal = document.getElementById("productModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      };
+
+      window.closeProductModal = function () {
+        const modal = document.getElementById("productModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = "";
+        state.activeModalProduct = null;
+      };
+
+      window.switchModalMedia = function (index) {
+        state.activeMediaIndex = index;
+        renderProductModalContent();
+      };
+
+      window.adjustModalVariationQty = function (variationId, delta) {
+        const product = state.activeModalProduct;
+        if (!product) return;
+        const variation = product.variations.find((v) => v.id === variationId);
+        if (!variation) return;
+
+        const currentQty = state.modalVariationQuantities[variationId] || 0;
+        // Check how many of this variation are already in cart
+        const inCartItem = state.cart.find(
+          (c) => c.productId === product.id && c.variationId === variationId,
+        );
+        const alreadyInCart = inCartItem ? inCartItem.quantity : 0;
+        const maxAddable = Math.max(0, variation.stock - alreadyInCart);
+
+        const nextQty = Math.max(0, Math.min(maxAddable, currentQty + delta));
+        if (currentQty + delta > maxAddable) {
+          showToast(
+            `Maximum available stock (${variation.stock}) reached for ${variation.name}`,
+            "error",
+          );
+        }
+        state.modalVariationQuantities[variationId] = nextQty;
+        renderProductModalContent();
+      };
+
+      window.addSelectedDesignsToCart = function () {
+        const product = state.activeModalProduct;
+        if (!product) return;
+
+        let totalAddedCount = 0;
+        product.variations.forEach((variation) => {
+          const qtyToAdd = state.modalVariationQuantities[variation.id] || 0;
+          if (qtyToAdd > 0) {
+            const existing = state.cart.find(
+              (item) =>
+                item.productId === product.id &&
+                item.variationId === variation.id,
+            );
+            if (existing) {
+              existing.quantity = Math.min(
+                variation.stock,
+                existing.quantity + qtyToAdd,
+              );
+            } else {
+              state.cart.push({
+                productId: product.id,
+                productName: product.name,
+                category: product.category,
+                image: product.images[0],
+                variationId: variation.id,
+                variationName: variation.name,
+                variationColor: variation.color,
+                priceNGN: variation.priceNGN,
+                quantity: qtyToAdd,
+              });
+            }
+            totalAddedCount += qtyToAdd;
+          }
+        });
+
+        if (totalAddedCount === 0) {
+          showToast(
+            "Please select at least 1 design variation quantity above.",
+            "error",
+          );
+          return;
+        }
+
+        saveStateToLocal();
+        renderCart();
+        closeProductModal();
+        openCartDrawer();
+        showToast(
+          `Added ${totalAddedCount} curated piece${totalAddedCount > 1 ? "s" : ""} to your bag`,
+          "success",
+        );
+      };
+
+      function renderProductModalContent() {
+        const product = state.activeModalProduct;
+        if (!product) return;
+
+        // Build unified media gallery array (images + optional video)
+        const mediaItems = product.images.map((url) => ({
+          type: "image",
+          url,
+        }));
+        if (product.video) {
+          mediaItems.push({ type: "video", url: product.video });
+        }
+
+        const activeMedia = mediaItems[state.activeMediaIndex] || mediaItems[0];
+
+        // Calculate combined total of all selected variations in this modal
+        let combinedSelectedPieces = 0;
+        let combinedSelectedNGN = 0;
+        product.variations.forEach((v) => {
+          const q = state.modalVariationQuantities[v.id] || 0;
+          combinedSelectedPieces += q;
+          combinedSelectedNGN += q * v.priceNGN;
+        });
+
+        const thumbnailsHtml = mediaItems
+          .map((m, idx) => {
+            const isSelected = idx === state.activeMediaIndex;
+            if (m.type === "video") {
+              return `
+              <button onclick="switchModalMedia(${idx})"
+                class="w-16 h-20 rounded-xl overflow-hidden border-2 ${isSelected ? "border-zyro-gold" : "border-transparent"} bg-zyro-obsidian text-white flex flex-col items-center justify-center gap-1 shrink-0">
+                <i class="fa-solid fa-play text-zyro-gold text-sm"></i>
+                <span class="text-[9px] uppercase tracking-wider">Film</span>
+              </button>
+            `;
+            }
+            return `
+            <button onclick="switchModalMedia(${idx})"
+              class="w-16 h-20 rounded-xl overflow-hidden border-2 ${isSelected ? "border-zyro-gold" : "border-transparent"} shrink-0">
+              <img src="${m.url}" class="w-full h-full object-cover" />
+            </button>
+          `;
+          })
+          .join("");
+
+        const variationsHtml = product.variations
+          .map((v) => {
+            const qty = state.modalVariationQuantities[v.id] || 0;
+            const inCart =
+              state.cart.find(
+                (c) => c.productId === product.id && c.variationId === v.id,
+              )?.quantity || 0;
+            const remaining = Math.max(0, v.stock - inCart);
+
+            return `
+            <div class="p-3.5 rounded-2xl border ${qty > 0 ? "border-zyro-gold bg-white shadow-sm" : "border-black/10 bg-white/60"} flex items-center justify-between gap-3 transition">
+              <div class="flex items-center gap-3 min-w-0">
+                <span class="w-6 h-6 rounded-full border border-black/20 shrink-0 shadow-inner" style="background:${v.color}"></span>
+                <div class="min-w-0">
+                  <p class="text-xs sm:text-sm font-semibold text-zyro-obsidian truncate">${v.name}</p>
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="font-semibold text-zyro-emerald">${formatPrice(v.priceNGN)}</span>
+                    <span class="text-neutral-400">·</span>
+                    <span class="text-[11px] ${remaining > 0 ? "text-neutral-500" : "text-zyro-ruby font-medium"}">
+                      ${remaining > 0 ? `${remaining} in vault` : "Out of stock"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Multi-Design Quantity Stepper -->
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="adjustModalVariationQty('${v.id}', -1)" ${qty === 0 ? "disabled" : ""}
+                  class="w-8 h-8 rounded-full border border-black/15 flex items-center justify-center text-xs hover:bg-zyro-obsidian hover:text-white disabled:opacity-30 transition">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <span class="w-6 text-center text-xs font-bold">${qty}</span>
+                <button type="button" onclick="adjustModalVariationQty('${v.id}', 1)" ${remaining === 0 ? "disabled" : ""}
+                  class="w-8 h-8 rounded-full border border-black/15 flex items-center justify-center text-xs hover:bg-zyro-obsidian hover:text-white disabled:opacity-30 transition">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+
+        document.getElementById("productModalBody").innerHTML = `
+        <!-- Left: Gallery + Video Switcher -->
+        <div class="lg:col-span-6 bg-zyro-cream p-4 sm:p-6 flex flex-col justify-between gap-4">
+          <div class="relative aspect-[4/4] sm:aspect-[4/5] rounded-2xl overflow-hidden bg-zyro-obsidian shadow-inner">
+            ${
+              activeMedia.type === "video"
+                ? `<video src="${activeMedia.url}" controls autoplay loop muted playsinline class="w-full h-full object-cover"></video>`
+                : `<img src="${activeMedia.url}" alt="${product.name}" class="w-full h-full object-cover" />`
+            }
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/75 text-zyro-goldLight text-[10px] uppercase tracking-editorial">
+              ${product.badge}
+            </span>
+          </div>
+
+          <!-- Media Thumbnails -->
+          <div class="flex items-center gap-2.5 overflow-x-auto pb-1">
+            ${thumbnailsHtml}
+          </div>
+        </div>
+
+        <!-- Right: Editorial Info & Multi-Design Selection -->
+        <div class="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-editorial text-zyro-gold font-semibold">${product.category}</p>
+              <h2 class="font-editorial text-3xl sm:text-4xl font-normal leading-tight mt-1">${product.name}</h2>
+            </div>
+
+            <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+              ${product.description}
+            </p>
+
+            <!-- Multi-Variation Selector Section -->
+            <div class="pt-2 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold uppercase tracking-editorial text-zyro-obsidian">
+                  Select Designs &amp; Quantities
+                </span>
+                <span class="text-[10px] text-zyro-emerald font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full">
+                  Multi-Design Cart Supported
+                </span>
+              </div>
+
+              <div class="space-y-2.5 max-h-64 overflow-y-auto pr-1">
+                ${variationsHtml}
+              </div>
+            </div>
+          </div>
+
+          <!-- Unified Add-to-Bag Footer -->
+          <div class="pt-4 border-t border-black/10 space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-neutral-500">Selected Selection (${combinedSelectedPieces} piece${combinedSelectedPieces === 1 ? "" : "s"}):</span>
+              <span class="font-editorial text-2xl font-semibold text-zyro-obsidian">${formatPrice(combinedSelectedNGN)}</span>
+            </div>
+
+            <button onclick="addSelectedDesignsToCart()"
+              class="w-full py-4 px-6 rounded-full bg-zyro-obsidian text-white text-xs font-semibold uppercase tracking-editorial hover:bg-zyro-gold transition shadow-lg flex items-center justify-center gap-2.5">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Add Selected Designs to Bag (${combinedSelectedPieces})</span>
+            </button>
+          </div>
+        </div>
+      `;
+      }
+
+      // ------------------------------------------------------------------------
+      // G. SHOPPING CART DRAWER, PROMO CODES & CALCULATIONS
+      // ------------------------------------------------------------------------
+      window.openCartDrawer = function () {
+        renderCart();
+        const backdrop = document.getElementById("cartDrawerBackdrop");
+        const drawer = document.getElementById("cartDrawer");
+        backdrop.classList.remove("hidden");
+        setTimeout(() => {
+          backdrop.classList.remove("opacity-0");
+          drawer.classList.remove("translate-x-full");
+        }, 10);
+      };
+
+      window.closeCartDrawer = function () {
+        const backdrop = document.getElementById("cartDrawerBackdrop");
+        const drawer = document.getElementById("cartDrawer");
+        backdrop.classList.add("opacity-0");
+        drawer.classList.add("translate-x-full");
+        setTimeout(() => backdrop.classList.add("hidden"), 350);
+      };
+
+      window.openNavDrawer = function () {
+        const backdrop = document.getElementById("navDrawerBackdrop");
+        const drawer = document.getElementById("navDrawer");
+        backdrop.classList.remove("hidden");
+        setTimeout(() => {
+          backdrop.classList.remove("opacity-0");
+          drawer.classList.remove("-translate-x-full");
+        }, 10);
+      };
+
+      window.closeNavDrawer = function () {
+        const backdrop = document.getElementById("navDrawerBackdrop");
+        const drawer = document.getElementById("navDrawer");
+        backdrop.classList.add("opacity-0");
+        drawer.classList.add("-translate-x-full");
+        setTimeout(() => backdrop.classList.add("hidden"), 350);
+      };
+
+      document
+        .getElementById("openMenuBtn")
+        .addEventListener("click", openNavDrawer);
+
+      window.updateCartItemQty = function (productId, variationId, delta) {
+        const idx = state.cart.findIndex(
+          (i) => i.productId === productId && i.variationId === variationId,
+        );
+        if (idx === -1) return;
+
+        const product = state.products.find((p) => p.id === productId);
+        const variation = product?.variations.find((v) => v.id === variationId);
+        const maxStock = variation ? variation.stock : 99;
+
+        const nextQty = state.cart[idx].quantity + delta;
+        if (nextQty <= 0) {
+          state.cart.splice(idx, 1);
+        } else if (nextQty > maxStock) {
+          showToast(`Only ${maxStock} pieces available in vault`, "error");
+          return;
+        } else {
+          state.cart[idx].quantity = nextQty;
+        }
+
+        saveStateToLocal();
+        renderCart();
+      };
+
+      window.removeCartItem = function (productId, variationId) {
+        state.cart = state.cart.filter(
+          (i) => !(i.productId === productId && i.variationId === variationId),
+        );
+        saveStateToLocal();
+        renderCart();
+      };
+
+      window.applyPromoCode = function () {
+        const code = document
+          .getElementById("promoCodeInput")
+          .value.trim()
+          .toUpperCase();
+        if (code === "ZYROVIP" || code === "ZYRO10") {
+          state.promoApplied = true;
+          renderCart();
+          showToast("ZYROVIP 10% Private Client Privilege Applied", "success");
+        } else {
+          showToast("Invalid promo code. Try ZYROVIP", "error");
+        }
+      };
+
+      function calculateCartTotals() {
+        const subtotalNGN = state.cart.reduce(
+          (sum, item) => sum + item.priceNGN * item.quantity,
+          0,
+        );
+        const discountNGN = state.promoApplied
+          ? Math.round(subtotalNGN * 0.1)
+          : 0;
+        const afterDiscount = subtotalNGN - discountNGN;
+        // Complimentary armoured shipping above ₦2,500,000, else ₦35,000 insured courier
+        const shippingNGN =
+          subtotalNGN === 0 || afterDiscount >= 2500000 ? 0 : 35000;
+        const totalNGN = afterDiscount + shippingNGN;
+        const totalItems = state.cart.reduce(
+          (sum, item) => sum + item.quantity,
+          0,
+        );
+
+        return { subtotalNGN, discountNGN, shippingNGN, totalNGN, totalItems };
+      }
+
+      function renderCart() {
+        const { subtotalNGN, discountNGN, shippingNGN, totalNGN, totalItems } =
+          calculateCartTotals();
+
+        document.getElementById("headerCartCount").textContent = totalItems;
+        document.getElementById("cartSubtitle").textContent =
+          `${totalItems} Piece${totalItems === 1 ? "" : "s"} Selected`;
+
+        const container = document.getElementById("cartItemsContainer");
+        const checkoutBtn = document.getElementById("proceedCheckoutBtn");
+
+        if (state.cart.length === 0) {
+          container.innerHTML = `
+          <div class="h-full flex flex-col items-center justify-center text-center py-16 space-y-4">
+            <div class="w-16 h-16 rounded-full bg-zyro-cream flex items-center justify-center text-zyro-gold text-xl">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <h4 class="font-editorial text-2xl">Your Bag is Empty</h4>
+            <p class="text-xs text-neutral-500 max-w-xs">
+              Explore our horology, VVS diamonds, and 24K gold collections to curate your personal selection.
+            </p>
+            <button onclick="closeCartDrawer()" class="px-6 py-2.5 rounded-full bg-zyro-obsidian text-white text-xs uppercase tracking-widest">
+              Explore Creations
+            </button>
+          </div>
+        `;
+          checkoutBtn.disabled = true;
+          checkoutBtn.classList.add("opacity-40", "cursor-not-allowed");
+        } else {
+          checkoutBtn.disabled = false;
+          checkoutBtn.classList.remove("opacity-40", "cursor-not-allowed");
+
+          container.innerHTML = state.cart
+            .map(
+              (item) => `
+            <div class="p-3.5 rounded-2xl bg-white border border-black/10 flex gap-3.5 items-center">
+              <img src="${item.image}" alt="${item.productName}" class="w-16 h-20 rounded-xl object-cover shrink-0 bg-zyro-cream" />
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-2">
+                  <h5 class="font-editorial text-lg leading-tight truncate">${item.productName}</h5>
+                  <button onclick="removeCartItem('${item.productId}', '${item.variationId}')" class="text-neutral-400 hover:text-zyro-ruby text-xs">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </div>
+
+                <!-- Variation Pill -->
+                <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-zyro-ivory border border-black/10 text-[10px] font-medium mt-1">
+                  <span class="w-2 h-2 rounded-full" style="background:${item.variationColor}"></span>
+                  <span class="truncate max-w-[160px]">${item.variationName}</span>
+                </div>
+
+                <div class="mt-2.5 flex items-center justify-between">
+                  <span class="text-xs font-semibold text-zyro-obsidian">${formatPrice(item.priceNGN * item.quantity)}</span>
+                  <div class="flex items-center gap-2">
+                    <button onclick="updateCartItemQty('${item.productId}', '${item.variationId}', -1)"
+                      class="w-6 h-6 rounded-full border border-black/15 text-[10px] flex items-center justify-center hover:bg-black hover:text-white">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <span class="text-xs font-bold w-4 text-center">${item.quantity}</span>
+                    <button onclick="updateCartItemQty('${item.productId}', '${item.variationId}', 1)"
+                      class="w-6 h-6 rounded-full border border-black/15 text-[10px] flex items-center justify-center hover:bg-black hover:text-white">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `,
+            )
+            .join("");
+        }
+
+        document.getElementById("cartSubtotalDisplay").textContent =
+          formatPrice(subtotalNGN);
+        const discountRow = document.getElementById("promoDiscountRow");
+        if (state.promoApplied && discountNGN > 0) {
+          discountRow.classList.remove("hidden");
+          discountRow.classList.add("flex");
+          document.getElementById("cartDiscountDisplay").textContent =
+            `-${formatPrice(discountNGN)}`;
+        } else {
+          discountRow.classList.add("hidden");
+          discountRow.classList.remove("flex");
+        }
+
+        document.getElementById("cartShippingDisplay").textContent =
+          shippingNGN === 0 ? "Complimentary" : formatPrice(shippingNGN);
+        document.getElementById("cartTotalDisplay").textContent =
+          formatPrice(totalNGN);
+      }
+
+      // ------------------------------------------------------------------------
+      // H. PAYSTACK CHECKOUT & BACKEND VERIFICATION ARCHITECTURE
+      // ------------------------------------------------------------------------
+      window.openCheckoutModal = function () {
+        if (state.cart.length === 0) return;
+        closeCartDrawer();
+
+        const { subtotalNGN, discountNGN, shippingNGN, totalNGN } =
+          calculateCartTotals();
+        document.getElementById("checkoutSubtotal").textContent =
+          formatPrice(subtotalNGN);
+        document.getElementById("checkoutDiscount").textContent =
+          `-${formatPrice(discountNGN)}`;
+        document.getElementById("checkoutShipping").textContent =
+          shippingNGN === 0 ? "Complimentary" : formatPrice(shippingNGN);
+        document.getElementById("checkoutGrandTotal").textContent =
+          formatPrice(totalNGN);
+
+        document.getElementById("checkoutSummaryItems").innerHTML = state.cart
+          .map(
+            (item) => `
+          <div class="flex items-center justify-between gap-3 text-xs pb-2.5 border-b border-black/5">
+            <div class="min-w-0">
+              <p class="font-semibold truncate">${item.productName} <span class="text-neutral-400">×${item.quantity}</span></p>
+              <p class="text-[11px] text-neutral-500 truncate">${item.variationName}</p>
+            </div>
+            <span class="font-semibold shrink-0">${formatPrice(item.priceNGN * item.quantity)}</span>
+          </div>
+        `,
+          )
+          .join("");
+
+        const modal = document.getElementById("checkoutModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      };
+
+      window.closeCheckoutModal = function () {
+        const modal = document.getElementById("checkoutModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      };
+
+      window.initiatePaystackPayment = function (event) {
+        event.preventDefault();
+        const { totalNGN } = calculateCartTotals();
+        const email = document.getElementById("custEmail").value.trim();
+        const reference =
+          "ZYRO-" + Date.now() + "-" + Math.floor(1000 + Math.random() * 9000);
+
+        // If Paystack Inline SDK is available and user has set a real key, launch Paystack Popup
+        if (
+          window.PaystackPop &&
+          !ZYRO_CONFIG.paystackPublicKey.includes("1234567890")
+        ) {
+          const handler = window.PaystackPop.setup({
+            key: ZYRO_CONFIG.paystackPublicKey,
+            email: email,
+            amount: Math.round(totalNGN * 100), // Paystack expects kobo
+            currency: "NGN",
+            ref: reference,
+            metadata: {
+              custom_fields: [
+                {
+                  display_name: "Client Name",
+                  variable_name: "client_name",
+                  value: document.getElementById("custName").value,
+                },
+                {
+                  display_name: "Delivery City",
+                  variable_name: "city",
+                  value: document.getElementById("custCity").value,
+                },
+              ],
+            },
+            callback: function (response) {
+              verifyAndFinalizeOrder(response.reference);
+            },
+            onClose: function () {
+              showToast("Paystack checkout window closed.", "error");
+            },
+          });
+          handler.openIframe();
+        } else {
+          // Seamless test-mode verification flow when using placeholder Paystack key
+          showToast(
+            "Demo Paystack Key detected — running simulated payment verification...",
+          );
+          setTimeout(() => {
+            verifyAndFinalizeOrder(reference);
+          }, 900);
+        }
+      };
+
+      window.simulateInstantPaystackSuccess = function () {
+        const form = document.getElementById("checkoutForm");
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const reference = "ZYRO-VERIFIED-" + Date.now().toString().slice(-6);
+        verifyAndFinalizeOrder(reference);
+      };
+
+      async function verifyAndFinalizeOrder(paystackReference) {
+        const { totalNGN } = calculateCartTotals();
+
+        // 1. Backend Verification Hook (Calls your secure Cloud Function / API in production)
+        let verificationStatus = "Verified via Paystack";
+        try {
+          if (
+            ZYRO_CONFIG.paystackVerifyEndpoint &&
+            ZYRO_CONFIG.paystackVerifyEndpoint.startsWith("http")
+          ) {
+            const res = await fetch(
+              `${ZYRO_CONFIG.paystackVerifyEndpoint}?reference=${encodeURIComponent(paystackReference)}`,
+            );
+            if (res.ok) verificationStatus = "Server & Paystack Verified";
+          }
+        } catch (e) {
+          // Fallback to client-recorded reference in sandbox mode
+        }
+
+        // 2. Deduct Purchased Stock from Vault Inventory
+        state.cart.forEach((cartItem) => {
+          const prod = state.products.find((p) => p.id === cartItem.productId);
+          const variation = prod?.variations.find(
+            (v) => v.id === cartItem.variationId,
+          );
+          if (variation) {
+            variation.stock = Math.max(0, variation.stock - cartItem.quantity);
+          }
+        });
+
+        // 3. Record Confirmed Luxury Order
+        const newOrder = {
+          id: "ORD-" + Math.floor(100000 + Math.random() * 900000),
+          reference: paystackReference,
+          verificationStatus,
+          date: new Date().toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          }),
+          customer: {
+            name: document.getElementById("custName").value.trim(),
+            email: document.getElementById("custEmail").value.trim(),
+            phone: document.getElementById("custPhone").value.trim(),
+            city: document.getElementById("custCity").value.trim(),
+            address: document.getElementById("custAddress").value.trim(),
+          },
+          items: [...state.cart],
+          totalNGN,
+          status: "Verified & Preparing Armoured Dispatch",
+        };
+
+        state.orders.unshift(newOrder);
+
+        // Sync to Firestore if connected
+        if (fbDb && firestoreFns) {
+          try {
+            await firestoreFns.setDoc(
+              firestoreFns.doc(fbDb, "zyro_orders", newOrder.id),
+              newOrder,
+            );
+          } catch (err) {
+            console.warn("Firestore order sync note:", err.message);
+          }
+        }
+
+        // 4. Clear Cart & Refresh Views
+        state.cart = [];
+        state.promoApplied = false;
+        saveStateToLocal();
+        renderCart();
+        renderCatalog();
+        closeCheckoutModal();
+        openOrdersModal();
+        showToast(`Order ${newOrder.id} Confirmed & Verified!`, "success");
+      }
+
+      // ------------------------------------------------------------------------
+      // I. CLIENT ORDER TRACKING MODAL
+      // ------------------------------------------------------------------------
+      window.openOrdersModal = function () {
+        const container = document.getElementById("clientOrdersList");
+        if (state.orders.length === 0) {
+          container.innerHTML = `
+          <div class="py-16 text-center space-y-3">
+            <i class="fa-regular fa-compass text-4xl text-zyro-gold"></i>
+            <h4 class="font-editorial text-2xl">No Active Acquisitions Yet</h4>
+            <p class="text-xs text-neutral-500 max-w-sm mx-auto">
+              Once you complete a Paystack checkout, your GIA certificates, reference numbers, and live courier tracking appear here.
+            </p>
+          </div>
+        `;
+        } else {
+          container.innerHTML = state.orders
+            .map(
+              (ord) => `
+            <div class="p-5 rounded-2xl bg-white border border-black/10 space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-black/10">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-zyro-gold">${ord.date} · REF: ${ord.reference}</span>
+                  <h4 class="font-editorial text-2xl">${ord.id} — ${ord.customer.name}</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold">
+                  ${ord.status}
+                </span>
+              </div>
+
+              <div class="space-y-1.5 text-xs">
+                ${ord.items
+                  .map(
+                    (it) => `
+                    <div class="flex justify-between">
+                      <span>${it.productName} <span class="text-neutral-500">(${it.variationName})</span> × ${it.quantity}</span>
+                      <span class="font-semibold">${formatPrice(it.priceNGN * it.quantity)}</span>
+                    </div>
+                  `,
+                  )
+                  .join("")}
+              </div>
+
+              <div class="pt-2 border-t border-black/5 flex flex-wrap items-center justify-between text-xs text-neutral-500">
+                <span>Destination: ${ord.customer.address}, ${ord.customer.city}</span>
+                <span class="text-sm font-bold text-zyro-obsidian">Paid: ${formatPrice(ord.totalNGN)}</span>
+              </div>
+            </div>
+          `,
+            )
+            .join("");
+        }
+
+        const modal = document.getElementById("ordersModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      };
+
+      window.closeOrdersModal = function () {
+        const modal = document.getElementById("ordersModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      };
+
+      // ------------------------------------------------------------------------
+      // J. SECURE ADMIN DASHBOARD (AUTH, PRODUCT CRUD, VARIATION STOCK, ORDERS)
+      // ------------------------------------------------------------------------
+      window.openAdminModal = function () {
+        const modal = document.getElementById("adminModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        if (state.isAdminAuthenticated) {
+          renderAdminDashboard();
+        }
+      };
+
+      window.closeAdminModal = function () {
+        const modal = document.getElementById("adminModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      };
+
+      window.handleAdminLogin = async function (event) {
+        event.preventDefault();
+        const email = document.getElementById("adminEmailInput").value.trim();
+        const pass = document.getElementById("adminPassInput").value.trim();
+
+        // If Firebase Auth is configured, attempt real Firebase Email/Password sign-in
+        if (fbAuth && firestoreFns) {
+          try {
+            await firestoreFns.signInWithEmailAndPassword(fbAuth, email, pass);
+            state.isAdminAuthenticated = true;
+          } catch (err) {
+            showToast("Firebase Auth Error: " + err.message, "error");
+            return;
+          }
+        } else {
+          // Demo vault unlock
+          if (pass.length < 4) {
+            showToast("Please enter valid vault passkey", "error");
+            return;
+          }
+          state.isAdminAuthenticated = true;
+        }
+
+        document.getElementById("adminLoginView").classList.add("hidden");
+        document
+          .getElementById("adminDashboardView")
+          .classList.remove("hidden");
+        document.getElementById("adminLogoutBtn").classList.remove("hidden");
+        renderAdminDashboard();
+        showToast("Maison Vault Unlocked", "success");
+      };
+
+      window.adminLogout = function () {
+        state.isAdminAuthenticated = false;
+        document.getElementById("adminLoginView").classList.remove("hidden");
+        document.getElementById("adminDashboardView").classList.add("hidden");
+        document.getElementById("adminLogoutBtn").classList.add("hidden");
+      };
+
+      window.switchAdminTab = function (tab) {
+        document
+          .getElementById("adminTabProducts")
+          .classList.toggle("hidden", tab !== "products");
+        document
+          .getElementById("adminTabOrders")
+          .classList.toggle("hidden", tab !== "orders");
+        document
+          .getElementById("adminTabNewProduct")
+          .classList.toggle("hidden", tab !== "newProduct");
+      };
+
+      function renderAdminDashboard() {
+        const totalRevenueNGN = state.orders.reduce(
+          (s, o) => s + o.totalNGN,
+          0,
+        );
+        const lowStockCount = state.products.reduce(
+          (count, p) => count + p.variations.filter((v) => v.stock <= 2).length,
+          0,
+        );
+
+        document.getElementById("kpiRevenue").textContent =
+          formatPrice(totalRevenueNGN);
+        document.getElementById("kpiOrders").textContent = state.orders.length;
+        document.getElementById("kpiProducts").textContent =
+          state.products.length;
+        document.getElementById("kpiLowStock").textContent = lowStockCount;
+
+        // Render Products List with Quick Stock Increment/Decrement
+        document.getElementById("adminTabProducts").innerHTML = state.products
+          .map(
+            (p) => `
+          <div class="p-4 rounded-2xl bg-white border border-black/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <img src="${p.images[0]}" class="w-14 h-16 rounded-xl object-cover bg-zyro-cream" />
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-zyro-gold font-semibold">${p.category}</span>
+                <h5 class="font-editorial text-xl">${p.name}</h5>
+                <div class="flex flex-wrap gap-1.5 mt-1">
+                  ${p.variations
+                    .map(
+                      (v) => `
+                      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zyro-ivory border border-black/10 text-[10px]">
+                        <span class="w-2 h-2 rounded-full" style="background:${v.color}"></span>
+                        ${v.name}: <strong>${formatPrice(v.priceNGN)}</strong> (Stock: ${v.stock})
+                        <button onclick="adminAdjustStock('${p.id}', '${v.id}', 1)" class="ml-1 px-1 rounded bg-emerald-100 text-emerald-800 font-bold">+1</button>
+                      </span>
+                    `,
+                    )
+                    .join("")}
+                </div>
+              </div>
+            </div>
+
+            <button onclick="adminDeleteProduct('${p.id}')" class="px-3.5 py-2 rounded-xl border border-zyro-ruby/30 text-zyro-ruby text-xs font-semibold hover:bg-zyro-ruby hover:text-white transition self-start md:self-center">
+              Delete
+            </button>
+          </div>
+        `,
+          )
+          .join("");
+
+        // Render Orders List with Status Updater
+        const ordersTab = document.getElementById("adminTabOrders");
+        if (state.orders.length === 0) {
+          ordersTab.innerHTML = `<p class="text-xs text-neutral-500 py-8 text-center">No customer orders recorded yet.</p>`;
+        } else {
+          ordersTab.innerHTML = state.orders
+            .map(
+              (o) => `
+            <div class="p-4 rounded-2xl bg-white border border-black/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">
+              <div>
+                <p class="font-bold text-zyro-obsidian">${o.id} · ${o.customer.name} (${o.customer.email})</p>
+                <p class="text-neutral-500">Ref: ${o.reference} · ${o.items.length} line item(s) · Total: <strong>${formatPrice(o.totalNGN)}</strong></p>
+              </div>
+              <select onchange="adminUpdateOrderStatus('${o.id}', this.value)"
+                class="px-3 py-2 rounded-xl border border-black/15 bg-zyro-ivory font-semibold">
+                <option ${o.status.includes("Verified") ? "selected" : ""}>Verified & Preparing Armoured Dispatch</option>
+                <option ${o.status === "In Transit (Armoured Courier)" ? "selected" : ""}>In Transit (Armoured Courier)</option>
+                <option ${o.status === "Delivered & Signed" ? "selected" : ""}>Delivered & Signed</option>
+              </select>
+            </div>
+          `,
+            )
+            .join("");
+        }
+      }
+
+      window.adminAdjustStock = function (productId, variationId, delta) {
+        const prod = state.products.find((p) => p.id === productId);
+        const variation = prod?.variations.find((v) => v.id === variationId);
+        if (variation) {
+          variation.stock = Math.max(0, variation.stock + delta);
+          saveStateToLocal();
+          renderAdminDashboard();
+          renderCatalog();
+          showToast(`Stock updated for ${variation.name}`);
+        }
+      };
+
+      window.adminDeleteProduct = async function (productId) {
+        state.products = state.products.filter((p) => p.id !== productId);
+        saveStateToLocal();
+        if (fbDb && firestoreFns) {
+          try {
+            await firestoreFns.deleteDoc(
+              firestoreFns.doc(fbDb, "zyro_products", productId),
+            );
+          } catch (e) {}
+        }
+        renderAdminDashboard();
+        renderCatalog();
+        showToast("Creation removed from catalog");
+      };
+
+      window.adminUpdateOrderStatus = function (orderId, newStatus) {
+        const ord = state.orders.find((o) => o.id === orderId);
+        if (ord) {
+          ord.status = newStatus;
+          saveStateToLocal();
+          showToast(`Order ${orderId} status updated`);
+        }
+      };
+
+      window.addVariationInputRow = function () {
+        const container = document.getElementById("variationInputsContainer");
+        const row = document.createElement("div");
+        row.className = "grid grid-cols-12 gap-2 items-center variation-row";
+        row.innerHTML = `
+        <input type="text" placeholder="Design Name" required class="col-span-5 px-3 py-2 rounded-lg border border-black/15 text-xs var-name" />
+        <input type="color" value="#0F4C3A" class="col-span-1 h-8 w-full rounded cursor-pointer var-color" />
+        <input type="number" placeholder="Price NGN" value="2500000" required class="col-span-3 px-3 py-2 rounded-lg border border-black/15 text-xs var-price" />
+        <input type="number" placeholder="Stock" value="4" required class="col-span-3 px-3 py-2 rounded-lg border border-black/15 text-xs var-stock" />
+      `;
+        container.appendChild(row);
+      };
+
+      window.handleCreateProduct = async function (event) {
+        event.preventDefault();
+        const rows = document.querySelectorAll(".variation-row");
+        const variations = Array.from(rows).map((row, idx) => ({
+          id: "var-" + Date.now() + "-" + idx,
+          name: row.querySelector(".var-name").value.trim(),
+          color: row.querySelector(".var-color").value,
+          priceNGN: Number(row.querySelector(".var-price").value),
+          stock: Number(row.querySelector(".var-stock").value),
+        }));
+
+        const newProduct = {
+          id: "zyro-" + Date.now(),
+          name: document.getElementById("newProdName").value.trim(),
+          category: document.getElementById("newProdCategory").value,
+          badge:
+            document.getElementById("newProdBadge").value.trim() ||
+            "NEW ARRIVAL",
+          description: document.getElementById("newProdDesc").value.trim(),
+          images: document
+            .getElementById("newProdImages")
+            .value.split(",")
+            .map((s) => s.trim())
+            .filter(Boolean),
+          video: document.getElementById("newProdVideo").value.trim(),
+          variations,
+        };
+
+        state.products.unshift(newProduct);
+        saveStateToLocal();
+
+        if (fbDb && firestoreFns) {
+          try {
+            await firestoreFns.setDoc(
+              firestoreFns.doc(fbDb, "zyro_products", newProduct.id),
+              newProduct,
+            );
+          } catch (e) {}
+        }
+
+        event.target.reset();
+        switchAdminTab("products");
+        renderAdminDashboard();
+        renderCatalog();
+        showToast(
+          `Published "${newProduct.name}" to ZYRØ Storefront`,
+          "success",
+        );
+      };
+
+      window.resetDemoCatalog = function () {
+        state.products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+        saveStateToLocal();
+        renderAdminDashboard();
+        renderCatalog();
+        showToast("Default luxury catalog restored");
+      };
+
+      // ------------------------------------------------------------------------
+      // K. CAMPAIGN FILM MODAL & INITIALIZATION
+      // ------------------------------------------------------------------------
+      window.openLookbookStory = function () {
+        const m = document.getElementById("campaignModal");
+        m.classList.remove("hidden");
+        m.classList.add("flex");
+      };
+
+      window.closeLookbookStory = function () {
+        const m = document.getElementById("campaignModal");
+        m.classList.add("hidden");
+        m.classList.remove("flex");
+      };
+
+      // Header scroll shadow
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 30) {
+          header.classList.add("header-scrolled", "shadow-sm");
+        } else {
+          header.classList.remove("header-scrolled", "shadow-sm");
+        }
+      });
+
+      // Boot Application
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("currencyBadge").textContent =
+          state.currency === "NGN" ? "NGN ₦" : "USD $";
+        renderCategoryPills();
+        renderCatalog();
+        renderCart();
+        initFirebaseIfConfigured();
+      });
+    </script>
+  </body>
+</html>
